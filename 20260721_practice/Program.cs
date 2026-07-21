@@ -224,7 +224,7 @@ namespace _20260721_Practice
         }
 
         static int CalcDamage(int attack, int defense)
-        {
+        {mmm
 
         }
             
