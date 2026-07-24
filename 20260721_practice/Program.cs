@@ -8,8 +8,8 @@ namespace _20260721_Practice
 {
     public class Program
     {
-        static void Main(string[] args)
-        {
+        //static void Main(string[] args)
+        //{
             //    int x = 11;
             //     Console.WriteLine($"x= {x}");
 
@@ -122,7 +122,7 @@ namespace _20260721_Practice
 
 
 
-            sb();
+            //sb();
 
             //    Number();
 
@@ -197,174 +197,174 @@ namespace _20260721_Practice
 
 
 
-        }
-        static void m211()
-        {
-            int x = 11;
-            Console.WriteLine($"x= {x}");
-        }
-        static void m212()
-        {
-            int x = 13 + 17;
-            Console.WriteLine("x=" + x);
-        }
-        static void m213()
-        {
-            int x = 13;
-            int y = 17;
-            Console.WriteLine("x=" + y);
-        }
-        static void m214()
-        {
-            int x = 13;
-            int y = 17;
-            Console.WriteLine("x=" + x * y);
-        }
+        //}
+        //static void m211()
+        //{
+        //    int x = 11;
+        //    Console.WriteLine($"x= {x}");
+        //}
+        //static void m212()
+        //{
+        //    int x = 13 + 17;
+        //    Console.WriteLine("x=" + x);
+        //}
+        //static void m213()
+        //{
+        //    int x = 13;
+        //    int y = 17;
+        //    Console.WriteLine("x=" + y);
+        //}
+        //static void m214()
+        //{
+        //    int x = 13;
+        //    int y = 17;
+        //    Console.WriteLine("x=" + x * y);
+        //}
 
 
 
 
 
 
-        static void m221()
-        {
-            string s = Console.ReadLine();
-            Console.WriteLine(s);
-        }
+        //static void m221()
+        //{
+        //    string s = Console.ReadLine();
+        //    Console.WriteLine(s);
+        //}
 
-        static void m222()
-        {
-            int x = int.Parse(Console.ReadLine());
-            Console.WriteLine(x);
-        }
+        //static void m222()
+        //{
+        //    int x = int.Parse(Console.ReadLine());
+        //    Console.WriteLine(x);
+        //}
 
-        static void m223(int m, int n)
-        {
-            Console.WriteLine((m + n) / 2);
-        }
+        //static void m223(int m, int n)
+        //{
+        //    Console.WriteLine((m + n) / 2);
+        //}
 
-        static void m224(int b)
-        {
-            Console.WriteLine(b * 365);
-        }
+        //static void m224(int b)
+        //{
+        //    Console.WriteLine(b * 365);
+        //}
 
-        static int power(int p)
-        {
-            return (p * p);
-        }
-
-
-
-        static void aaa(int q)
-        {
-            if (q >= 10)
-            {
-                return;
-            }
-            Console.WriteLine("値が10以下です");
-
-        }
+        //static int power(int p)
+        //{
+        //    return (p * p);
+        //}
 
 
-        static double CircleArea(double c)
-        {
-            return (c * c * 3.14);
-        }
+
+        //static void aaa(int q)
+        //{
+        //    if (q >= 10)
+        //    {
+        //        return;
+        //    }
+        //    Console.WriteLine("値が10以下です");
+
+        //}
 
 
-        static void ggg(int t)
-        {
+        //static double CircleArea(double c)
+        //{
+        //    return (c * c * 3.14);
+        //}
+
+
+        //static void ggg(int t)
+        //{
             // int h = t / 3600;
             // int m = (t - h*3600) / 60;
             // int s = t - (h*3600 + m*60);
 
-            int h = t / 3600;
-            int m = (t % 3600) / 60;
-            int s = t % 60;
+        //    int h = t / 3600;
+        //    int m = (t % 3600) / 60;
+        //    int s = t % 60;
 
-            //   Console.WriteLine(h + "時間" + m + "分" + s + "秒");
-            Console.WriteLine($"{h} 時間{m}分{s} 秒");
-        }
+        //    //   Console.WriteLine(h + "時間" + m + "分" + s + "秒");
+        //    Console.WriteLine($"{h} 時間{m}分{s} 秒");
+        //}
 
-        static int Add(int a, int b)
-        {
-            return (a + b);
-        }
+        //static int Add(int a, int b)
+        //{
+        //    return (a + b);
+        //}
 
-        static bool IsEven(int number)
-        {
-            if (number % 2 == 0)
-            {
-                return true;
-            }
-            return false;
-        }
+        //static bool IsEven(int number)
+        //{
+        //    if (number % 2 == 0)
+        //    {
+        //        return true;
+        //    }
+        //    return false;
+        //}
 
 
-        static int CalcTax(int price)
-        {
-            return (int)Math.Floor(price * 1.1);
-        }
+        //static int CalcTax(int price)
+        //{
+        //    return (int)Math.Floor(price * 1.1);
+        //}
 
-        static int GetMax(int a, int b, int c)
-        {
-            int l = 0;
-            if (a > b)
-            {
-                l = a;
-            }
-            else
-            {
-                l = b;
-            }
-            if (c > l)
-            {
-                l = c;
-            }
-            return l;
-        }
+        //static int GetMax(int a, int b, int c)
+        //{
+        //    int l = 0;
+        //    if (a > b)
+        //    {
+        //        l = a;
+        //    }
+        //    else
+        //    {
+        //        l = b;
+        //    }
+        //    if (c > l)
+        //    {
+        //        l = c;
+        //    }
+        //    return l;
+        //}
 
-        // 2026.7.22↓
-        // 2.3.1.問題3-1
+        //// 2026.7.22↓
+        //// 2.3.1.問題3-1
 
-        static void compare(int x, int y)
-        {
-            if (x > y)
-            {
-                Console.WriteLine("xはyより大きい");
-            }
-        }
+        //static void compare(int x, int y)
+        //{
+        //    if (x > y)
+        //    {
+        //        Console.WriteLine("xはyより大きい");
+        //    }
+        //}
 
-        // 2.3.2.	問題3-2
-        static void number(int x, int y)
-        {
-            if (x > y)
-            {
-                Console.WriteLine("xはyより大きい");
-            }
-            else if (x < y)
-            {
-                Console.WriteLine("xはyより小さい");
-            }
-            else
-            {
-                Console.WriteLine("xとyは等しい");
+        //// 2.3.2.	問題3-2
+        //static void number(int x, int y)
+        //{
+        //    if (x > y)
+        //    {
+        //        Console.WriteLine("xはyより大きい");
+        //    }
+        //    else if (x < y)
+        //    {
+        //        Console.WriteLine("xはyより小さい");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("xとyは等しい");
 
-            }
-        }
+        //    }
+        //}
 
-        //2.3.3.	問題3-3
-        static void even(int num)
-        {
-            if (num % 2 == 0)
-            {
-                Console.WriteLine("偶数");
-            }
-            else
-            {
-                Console.WriteLine("奇数");
-            }
-        }
+        ////2.3.3.	問題3-3
+        //static void even(int num)
+        //{
+        //    if (num % 2 == 0)
+        //    {
+        //        Console.WriteLine("偶数");
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("奇数");
+        //    }
+        //}
 
         //2.3.4.	問題3-4
         //static void judge(int score)
@@ -402,35 +402,35 @@ namespace _20260721_Practice
         //}
 
         //2.4.1.	問題4-1
-        static int Spam()
-        {
-            for (int i = 0; i < 10; i++)
-            {
-                Console.WriteLine("SPAM");
-            }
-            return 10;
-        }
+        //static int Spam()
+        //{
+        //    for (int i = 0; i < 10; i++)
+        //    {
+        //        Console.WriteLine("SPAM");
+        //    }
+        //    return 10;
+        //}
 
-        //2.4.2.	問題4-2
-        static void kuku(int x)
-        {
-            if (x % 3 == 0)
-            {
-                Console.WriteLine(x);
-            }
-            else
-            {
-                Console.WriteLine("---");
-            }
-        }
+        ////2.4.2.	問題4-2
+        //static void kuku(int x)
+        //{
+        //    if (x % 3 == 0)
+        //    {
+        //        Console.WriteLine(x);
+        //    }
+        //    else
+        //    {
+        //        Console.WriteLine("---");
+        //    }
+        //}
 
-        //2.4.3.問題4 - 3
-        static int avg(int a)
-        {
+        ////2.4.3.問題4 - 3
+        //static int avg(int a)
+        //{
 
-            return a / 10;
+        //    return a / 10;
 
-        }
+        //}
 
 
         //         //2.4.4.問題4 - 4
@@ -467,199 +467,199 @@ namespace _20260721_Practice
         //}
 
         //2.4.5.問題4 - 5
-        static void sb()
-        {
-            int sta = 0;
-            int bla = 0;
+        //static void sb()
+        //{
+        //    int sta = 0;
+        //    int bla = 0;
 
-            while (sta < 3 && bla < 4)
-            {
-                Console.WriteLine("ストライクは1，ボールは2を入力してください");
-                int s = int.Parse(Console.ReadLine());
-                if (s == 1)
-                {
-                    sta++;
-                }
-                else if (s == 2)
-                {
-                    bla++;
-                }
-                else if (s == 3)
-                {
-                    if (sta < 2)
-                    {
-                        sta++;
-                    }
-                }
-                Console.WriteLine($"{bla}ボール{sta}ストライク");
+        //    while (sta < 3 && bla < 4)
+        //    {
+        //        Console.WriteLine("ストライクは1，ボールは2を入力してください");
+        //        int s = int.Parse(Console.ReadLine());
+        //        if (s == 1)
+        //        {
+        //            sta++;
+        //        }
+        //        else if (s == 2)
+        //        {
+        //            bla++;
+        //        }
+        //        else if (s == 3)
+        //        {
+        //            if (sta < 2)
+        //            {
+        //                sta++;
+        //            }
+        //        }
+        //        Console.WriteLine($"{bla}ボール{sta}ストライク");
 
-            }
+        //    }
 
-        }
+        //}
 
-            //      }
-
-
-
-            // 2.5.1.	問題5-1
-            //      static void Number()
-            //      {
-
-            //          Console.WriteLine("数値を入力してください");
-            //	int[] num = new int[10];
-
-            //          for (int i = 0; i < 10; i++)
-            //          {
-            //              num[i] = int.Parse(Console.ReadLine());
-            //          }
-            //	for (int i = 0; i < 10; i++)
-            //	{
-            //		Console.WriteLine(num[i] * 2);
-            //	}
-            //}
+        //      }
 
 
-            //     static void num()
-            //     {
-            //         Console.WriteLine("数値を入力してください");
-            //int[] nums = new int[10];
-            //         for (int i = 0; i < 10; i++)
-            //         {
-            //             1nums[i] = int.Parse(Console.ReadLine());
-            //         }
-            //Console.WriteLine("偶数：" );
-            //         for (int i = 0; i < 10; i++)
-            //         {
-            //             if (nums[i] % 2 == 0)
-            //             {
-            //                 Console.WriteLine(nums[i]);
-            //             }
-            //         }
 
-            //         Console.WriteLine("奇数：" );
-            //             for (int i = 0; i < 10; i++)
-            //             {
-            //		if (nums[i] % 2 != 0)
-            //		{
-            //			Console.WriteLine(nums[i]);
-            //		}
-            //	}
-            //}
+        // 2.5.1.	問題5-1
+        //      static void Number()
+        //      {
+
+        //          Console.WriteLine("数値を入力してください");
+        //	int[] num = new int[10];
+
+        //          for (int i = 0; i < 10; i++)
+        //          {
+        //              num[i] = int.Parse(Console.ReadLine());
+        //          }
+        //	for (int i = 0; i < 10; i++)
+        //	{
+        //		Console.WriteLine(num[i] * 2);
+        //	}
+        //}
 
 
-            //static void Kuku()
-            //{
-            //    for (int i = 1; i <= 9; i++)
-            //    {
-            //        for (int j = 1; j <= 9; j++)
-            //        {
-            //            Console.Write((i * j) + "\t");
-            //        }
-            //        Console.WriteLine();
-            //    }
-            //}
+        //     static void num()
+        //     {
+        //         Console.WriteLine("数値を入力してください");
+        //int[] nums = new int[10];
+        //         for (int i = 0; i < 10; i++)
+        //         {
+        //             1nums[i] = int.Parse(Console.ReadLine());
+        //         }
+        //Console.WriteLine("偶数：" );
+        //         for (int i = 0; i < 10; i++)
+        //         {
+        //             if (nums[i] % 2 == 0)
+        //             {
+        //                 Console.WriteLine(nums[i]);
+        //             }
+        //         }
+
+        //         Console.WriteLine("奇数：" );
+        //             for (int i = 0; i < 10; i++)
+        //             {
+        //		if (nums[i] % 2 != 0)
+        //		{
+        //			Console.WriteLine(nums[i]);
+        //		}
+        //	}
+        //}
 
 
-            //  2.5.4.	問題5-4
-            //      static void sm()
-            //       {
-            //          Console.WriteLine("数字を10個入力してください");
-            //          int[] nums = new int[10];
-            //          for (int i = 0; i< 10; i++)
-            //          {
-            //              nums[i] = int.Parse(Console.ReadLine());
-            //          }
-            //          for (int i = 0; i < 10; i++)
-            //          {
-            //              for (int j = i + 1; j < 10; j++)
-            //              {
-            //                  if (nums[i] > nums[j])
-            //                  {
-            //				int temp = nums[i];
-            //				nums[i] = nums[j];
-            //				nums[j] = temp;
-            //			}
-            //              }
-            //          }
-            //	Console.WriteLine("小さい順");
-            //	for (int i = 0; i < 10; i++)
-            //	{
-            //		Console.WriteLine(nums[i]);
-            //	}
-            //}
+        //static void Kuku()
+        //{
+        //    for (int i = 1; i <= 9; i++)
+        //    {
+        //        for (int j = 1; j <= 9; j++)
+        //        {
+        //            Console.Write((i * j) + "\t");
+        //        }
+        //        Console.WriteLine();
+        //    }
+        //}
 
 
-            //2.6.1.	問題6-1
-            //static int Method(int t)
-            //{
-            //	return t * t;
-            //}
+        //  2.5.4.	問題5-4
+        //      static void sm()
+        //       {
+        //          Console.WriteLine("数字を10個入力してください");
+        //          int[] nums = new int[10];
+        //          for (int i = 0; i< 10; i++)
+        //          {
+        //              nums[i] = int.Parse(Console.ReadLine());
+        //          }
+        //          for (int i = 0; i < 10; i++)
+        //          {
+        //              for (int j = i + 1; j < 10; j++)
+        //              {
+        //                  if (nums[i] > nums[j])
+        //                  {
+        //				int temp = nums[i];
+        //				nums[i] = nums[j];
+        //				nums[j] = temp;
+        //			}
+        //              }
+        //          }
+        //	Console.WriteLine("小さい順");
+        //	for (int i = 0; i < 10; i++)
+        //	{
+        //		Console.WriteLine(nums[i]);
+        //	}
+        //}
 
 
+        //2.6.1.	問題6-1
+        //static int Method(int t)
+        //{
+        //	return t * t;
+        //}
 
 
 
 
 
-            // 2.6.2.	問題6-2
-            //      static int avge(int t,int s)
-            //      {
-
-            //          return (t + s )/ 2;
-            //}
 
 
-            //2.6.3.	問題6-3
-            //      static int com(int x, int y, int z)
-            //      {
-            //          int l = 0;
-            //          if (x > y)
-            //          {
-            //              l = x;
-            //          }
-            //          else if (y > z)
-            //          {
-            //              l = y;
-            //          }
-            //          else
-            //          {
-            //              l = z;
-            //          }
-            //          return l;
-            //}
+        // 2.6.2.	問題6-2
+        //      static int avge(int t,int s)
+        //      {
 
-            //2.6.4.	問題6-4
-            //     static int San()
-            //     {
-            //         int max = 0;
-            //for (int i = 1; i < 6; i++)
-            //         {
-            //	Console.Write(i  + "回目:"  );
-            //             int u = int.Parse(Console.ReadLine());
-            //             if (u > max)
-            //             {
-            //                 max = u;
-            //             }
-            //         }
-            //         return max;
-            //     }
+        //          return (t + s )/ 2;
+        //}
 
-            //      static int Min()
-            //      {
-            //	Console.Write("1回目:");
-            //	int min = int.Parse(Console.ReadLine());
 
-            //          for (int i = 2; i <= 5 ; i++)
-            //          {
-            //		Console.Write(i + "回目:");
-            //		int u = int.Parse(Console.ReadLine());
-            //		if (u < min)
-            //		{
-            //			min = u;
-            //		}
-            //	}
-            //	return min;
-            //}
+        //2.6.3.	問題6-3
+        //      static int com(int x, int y, int z)
+        //      {
+        //          int l = 0;
+        //          if (x > y)
+        //          {
+        //              l = x;
+        //          }
+        //          else if (y > z)
+        //          {
+        //              l = y;
+        //          }
+        //          else
+        //          {
+        //              l = z;
+        //          }
+        //          return l;
+        //}
+
+        //2.6.4.	問題6-4
+        //     static int San()
+        //     {
+        //         int max = 0;
+        //for (int i = 1; i < 6; i++)
+        //         {
+        //	Console.Write(i  + "回目:"  );
+        //             int u = int.Parse(Console.ReadLine());
+        //             if (u > max)
+        //             {
+        //                 max = u;
+        //             }
+        //         }
+        //         return max;
+        //     }
+
+        //      static int Min()
+        //      {
+        //	Console.Write("1回目:");
+        //	int min = int.Parse(Console.ReadLine());
+
+        //          for (int i = 2; i <= 5 ; i++)
+        //          {
+        //		Console.Write(i + "回目:");
+        //		int u = int.Parse(Console.ReadLine());
+        //		if (u < min)
+        //		{
+        //			min = u;
+        //		}
+        //	}
+        //	return min;
+        //}
 
 
         //    static int av()
@@ -675,6 +675,26 @@ namespace _20260721_Practice
         //}
 
 
+      
+            static void Main()
+            {
+                Dogclass dog1 = new Dogclass();
+
+                dog1.Name = "タロウ";
+                dog1.Age = 5;
+                dog1.Seed = "柴犬";
+
+			    Dogclass dog2 = new Dogclass();
+
+                dog2.Name = "ポチ";
+                dog2.Age = 9;
+                dog2.Seed = "ドーベルマン";
+
+			    dog1.ShowProfile();
+			    dog2.ShowProfile();
+			   
+		}
+        
         
     }
 }
