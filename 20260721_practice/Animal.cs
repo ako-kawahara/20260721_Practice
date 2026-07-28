@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Security;
 using System.Text;
 
 namespace _20260721_Practice
 {
 
-	class Animal
+	abstract class Animal
 	{
 		//public string Name { get; set; } // 名前
 		//public int Age { get; set; } // 年齢
@@ -22,69 +23,58 @@ namespace _20260721_Practice
 		//}
 
 		//2.7.8
-			public string Name { get; private set; }    // 名前
-			public int Age { get; private set; }        // 年齢
+		public string Name { get; private set; }    // 名前
+		public int Age { get; private set; }    // 年齢
 
-			public Animal(string name, int age)
-			{
-				Name = name;
-				Age = age;
-			}
-
-			public void ShowProfile()
-			{
-				Console.WriteLine(Name + "," + Age + "歳");
-			}
-
-		public virtual void Speak()
+		public virtual string Species 
 		{
-			Console.WriteLine("......");
+			get { return "Animal"; }
 		}
 
-	}
-
-
-	class Cat : Animal
-	{
-		public Cat(string name, int age)
-
-			: base(name, age)
+		public Animal(string name, int age)
 		{
+			Name = name;
+			Age = age;
 		}
 
-		public void Sleep()
+		public void ShowProfile()
 		{
-			Console.WriteLine("スースー");
+			Console.WriteLine(Name + "," + Age + "歳");
 		}
-		public override void Speak()
+
+		//public string Species;
+
+		public override string ToString()
 		{
-			Console.WriteLine("ニャー");
+			return $"{GetType().Name}名前: {Name}, 年齢: {Age}"; ;
 		}
-	}
 
+		public abstract void Speak();
 
-	//2.7.9
-	class Dog : Animal
-	{
-		public Dog(string name, int age)
-
-					: base(name, age)
+		public virtual void Walk()
 		{
+			Console.WriteLine("トコトコ歩く");
 		}
-		public void Run()
+		public void Walk(int steps)
 		{
-			Console.WriteLine("トコトコ");
+			Console.WriteLine($"{steps}歩歩いた");
+		}
+
+		public void ShowKind()
+		{
+			Console.WriteLine("動物です");
+		}
+		public void DoDaily()
+		{
+			ShowProfile();
+			Speak();
+			MoveCore();
 		}
 
 		
-
-
-
+		protected abstract void MoveCore();
 
 	}
-
-
-
 }
 
 

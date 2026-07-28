@@ -228,27 +228,173 @@ namespace _20260721_Practice
 			//cat.ShowProfile();
 			//cat.Speak();
 
-		
+
 			//2.7.11
-		Animal[] animals = new Animal[4];
-		animals[0] = new Cat("ミケ", 2);
-		animals[1] = new Dog("ポチ", 5);
-		animals[2] = new Cat("タマ", 1);
-		animals[3] = new Dog("コロ", 4);
+			//Animal[] animals = new Animal[4];
+			//animals[0] = new Cat("ミケ", 2);
+			//animals[1] = new Dog("ポチ", 5);
+			//animals[2] = new Cat("タマ", 1);
+			//animals[3] = new Dog("コロ", 4);
 
 
-			foreach (Animal a in animals)
-			{
-				a.ShowProfile();
-				a.Speak();
+			//	foreach (Animal a in animals)
+			//	{
+			//		a.ShowProfile();
+			//		a.Speak();
+			//	}
+
+			//2.8.2
+			//Animal dog = new Dog("ポチ", 3); 
+			//Animal cat = new Cat("タマ", 5); 
+			//Console.WriteLine(dog);
+			//Console.WriteLine(cat);
+
+			////2.8.3
+			//List<Animal> animal = new List<Animal>();
+			//animal.Add(new Dog("ポチ",3));
+			//animal.Add(new Cat("タマ",5));
+			//animal.Add(new Dog("ジョン",7));
+			//animal.Add(new Cat("ねこ", 5));
+
+			//foreach (Animal a in animal)
+			//{
+			//	a.Speak();
+			//	Console.WriteLine(a);
+			//}
+
+			//2.8.4
+			//List<Animal> animal = new List<Animal>
+			//{	
+			//	new Dog("ポチ", 3),
+			//	new Cat("タマ", 5),
+			//	new Dog("ジョン", 7),
+			//	new Cat("ねこ", 5),
+			//	new Bird("ぴよ",8),
+			//	new Bird ("ぽこ",11),
+			//};
+
+			//foreach (Animal a in animal)
+			//{
+			//	Console.WriteLine(a);
+			//	a.Speak();
+			//if (a is Bird b)
+			//{
+			//	b.Fly();
+			//}
+			//}
+
+			//2.8.5
+			//Animal dog = new Dog("ポン", 4);
+			//dog.Walk();
+			//dog.Walk(4);
+
+			//2.8.6
+			//List<Animal> animal = new List<Animal>
+			//{
+			//		new Dog("ポチ", 3),
+			//		new Cat("タマ", 5),
+			//		new Dog("ジョン", 7),
+			//		new Cat("ねこ", 5),
+			//		new Bird("ぴよ",8),
+			//		new Bird ("ぽこ",11),
+			//};
+			//foreach (Animal a in animal)
+			//{
+			//	Console.WriteLine($"{a.Species}{a.Name}{a.Age}");
+			//}
+
+
+
+
+			//Animal animal = new Cat("ミー", 9);
+			//animal.ShowKind();
+			//Cat cat = new Cat("ポン",5);
+			//cat.ShowKind();
+
+			////2.8.8
+			//Animal a = new Dog("ジョン",4);
+			//   ((Dog)a).Run();
+			////失敗すると例外が出る
+
+
+			//Dog dog = a as Dog;
+			//if (dog != null)
+			//{
+			//	dog.Run();
+			//}
+			////安全（null）の場合実行されない
+
+			//if (a is Dog d) d.Run();
+			////現代的で安全
+			///
+
+			//2.8.9
+
+			//List<Animal> animal = new List<Animal>
+			//{
+			//		new Dog("ポチ", 3),
+			//		new Cat("タマ", 5),
+			//		new Dog("ジョン", 7),
+			//		new Cat("ねこ", 5),
+			//		new Bird("ぴよ",8),
+			//		new Bird ("ぽこ",11),
+			//};
+			//foreach (Animal a in animal)
+			//{
+			//	a.DoDaily();
+			//}
+
+			//2.8.10
+
+
+			//Dog.Play();
+
+			//List<IPlayable> animal = new List<IPlayable>
+			//{
+			//		new Dog("ポチ", 3),
+			//		new Cat("タマ", 5),
+			//		new Dog("ジョン", 7),
+			//		new Cat("ねこ", 5),
+			//		new Bird("ぴよ", 8),
+			//		new Bird("ぽこ", 11)
+			//};
+			//foreach (IPlayable a in animal)
+			//{
+			//	a.Play();
+			//}
+
+			//List<Animal> ani = new List<Animal>
+			//{
+			//		new Dog("ポチ", 3),
+			//		new Cat("タマ", 5),
+			//		new Dog("ジョン", 7),
+			//		new Cat("ねこ", 5),
+			//		new Bird("ぴよ",8),
+			//		new Bird ("ぽこ",11),
+			//};
+			//foreach (Animal a in ani)
+			//{
+			//	a.Speak();
+			//}
+
+			//2.8.11
+			for (int i = 0; i < 10; i++)
+			{ 
+				Console.WriteLine("Dog,Cat,Birdのいずれかを入力してください");
+				Console.WriteLine("名称を入力してください");
+				Console.WriteLine("年齢を入力してください");
+				Console.Read();
+				Console.Read();
+				Console.Read();
+
+
 			}
 
-}
 
-	}
+		}
 
 
-	
+
 
 		//関数
 		//   string s = "11";
@@ -278,7 +424,7 @@ namespace _20260721_Practice
 
 
 
-		
+
 		//static void m211()
 		//{
 		//    int x = 11;
@@ -774,7 +920,7 @@ namespace _20260721_Practice
 		//	dog1.ShowProfile();
 		//	dog2.ShowProfile();
 
-		//}
+	}
 
 
 		
