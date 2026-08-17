@@ -814,42 +814,104 @@ namespace _20260721_Practice
 			//Console.WriteLine("保存しました");
 
 			//5.8.1
-			List<User> users = new List<User>();
-			string[] lines = File.ReadAllLines("user.csv");
-			foreach (string line in lines)
-			{
-				string[] data = line.Split(',');
-				if (data.Length != 2)
-				{
-					Console.WriteLine("データ形式が正しくありません");
-					continue;
-				}
-				User user = new User
-				{
-					Name = data[0],
-					Age = int.Parse(data[1])
-				};
-				users.Add(user);
-			}
-			Console.WriteLine("--　全ユーザー　--");
-			foreach (User user in users)
-			{
-				Console.WriteLine(user);
-			}
-			users = users.OrderByDescending(u => u.Age).ToList();
-			Console.WriteLine();
-			Console.WriteLine("=== 年齢順（降順） ===");
+			//List<User> users = new List<User>();
+			//string[] lines = File.ReadAllLines("user.csv");
+			//foreach (string line in lines)
+			//{
+			//	string[] data = line.Split(',');
+			//	if (data.Length != 2)
+			//	{
+			//		Console.WriteLine("データ形式が正しくありません");
+			//		continue;
+			//	}
+			//	User user = new User
+			//	{
+			//		Name = data[0],
+			//		Age = int.Parse(data[1])
+			//	};
+			//	users.Add(user);
+			//}
+			//Console.WriteLine("--　全ユーザー　--");
+			//foreach (User user in users)
+			//{
+			//	Console.WriteLine(user);
+			//}
+			//users = users.OrderByDescending(u => u.Age).ToList();
+			//Console.WriteLine();
+			//Console.WriteLine("=== 年齢順（降順） ===");
 
-			foreach (User user in users)
+			//foreach (User user in users)
+			//{
+			//	Console.WriteLine(user);
+			//}
+
+			//	List<User> users = new List<User>
+			//{
+			//	new User("Taro", 20),
+			//	new User("Hanako", 25),
+			//	new User("Jiro", 8)
+			//};
+
+			//	PrintUsersTable(users);
+
+			//5.10.1
+			//string path = "utf8.txt";
+			//using (StreamWriter writer = new StreamWriter(path, append: false, Encoding.UTF8))
+			//{
+			//	writer.WriteLine("こんにちは、世界！");
+			//	writer.WriteLine("これはUTF-8のテストです。");
+			//}
+			//using (StreamReader reader = new StreamReader(path, Encoding.UTF8))
+			//{
+			//	string line;
+			//	while ((line = reader.ReadLine()) != null)
+			//	{
+			//		Console.WriteLine(line);
+			//	}
+			//}
+
+			try
 			{
-				Console.WriteLine(user);
+				Log("起動しました");
+				Console.WriteLine("アプリが動いています");
+			}
+			catch (Exception ex)
+			{
+				Log("ERROR:" + ex.Message);
+			}
+			finally
+			{
+				Log("終了します");
 			}
 
 		}
+			//5.11.1
+			static void Log(string message)
+			{
+				string path = "logs/app.log";
+				Directory.CreateDirectory("logs");
+				using (StreamWriter writer = new StreamWriter(path, append: true))
+				{
+					writer.WriteLine($"{DateTime.Now:yyyy - MM - ddThh:mm: ss} {message}");
+				}
+			}
 
 
 
 	}
+
+	//	//5.9.1
+	//	static void PrintUsersTable(List<User> users)
+	//	{
+	//		Console.WriteLine("{0,-10} {1,5}", "Name", "Age");
+
+	//		foreach (User user in users)
+	//		{
+	//			Console.WriteLine("{0,-10}{1,5}", user.Name, user.Age);
+	//		}
+	//	}
+	
+
 
 		//3.7.1
 	//	namespace School
@@ -872,7 +934,7 @@ namespace _20260721_Practice
 	//	}
 	//}
 
-
+	//3.2.1
 		//enum Season { Spring, Summer, Autumn, Winter }
 
 		//2.3.1
