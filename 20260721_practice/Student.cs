@@ -8,16 +8,18 @@ namespace _20260721_Practice
     {
         public string Name { get; set; }
     
-        public int Age { get; set; }
+       // public int Age { get; set; }
 
-        //public Student(string name, int age)
-        //{
-        //    Name = name;
-        //    Age = age;
-        //}
-    public void ShowProfile()
-        {
-            Console.WriteLine($"{Name},{Age}");
-        }
-    }
+		public int Score { get; set; }
+
+		public Student(string name, int score)
+		{
+			Name = name;
+			Score = score;
+		}
+		//public void ShowProfile()
+		//      {
+		//          Console.WriteLine($"{Name},{Score}");
+		//      }
+	}
 }
