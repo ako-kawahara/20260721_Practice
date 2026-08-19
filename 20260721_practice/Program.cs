@@ -8,6 +8,7 @@ using System.Reflection.Metadata.Ecma335;
 using System.Runtime.ConstrainedExecution;
 using System.Security;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Timers;
 
 namespace _20260721_Practice
@@ -368,24 +369,121 @@ namespace _20260721_Practice
 			//Console.WriteLine("70点以上の人数：" + count + "人");
 
 			//6.8.1
-			List<Student> numbers = new List<Student>
+			//List<Student> numbers = new List<Student>
+			//{
+			//new Student("Aoki", 80),
+			//new Student("Alice", 90),
+			//new Student("Baba", 85),
+			//new Student("Abe", 60),
+			//new Student("Sato", 75)
+			//};
+			//var result = numbers.Where
+			//(
+			//student => student.Score >= 70 && student.Name.StartsWith("A")
+			//);
+			//foreach (Student student in result)
+			//{
+			//	Console.WriteLine(
+			//		$"名前：{student.Name} / 点数：{student.Score}点"
+			//	);
+			//}
+
+			//6.9.1
+			//List<Student> student = new List<Student>
+			//	{
+			//	new Student("Alice", 80),
+			//	new Student("Bob", 75), 
+			//	new Student("Charlie", 80), 
+			//	new Student("Dave", 60)
+			//	};
+			//var groups = student.GroupBy(student => student.Score);
+			//foreach (var group in groups)
+			//{
+			//	Console.WriteLine("点数：" + group.Key);
+			//	foreach (Student students in group)
+			//	{
+			//		Console.WriteLine("  " + students.Name);
+			//	}
+			//}
+
+			//6.10.1
+			//List<Product> products = new List<Product>
+			//{
+			//	new Product ("ぶた小間", 500, "肉"),
+			//	new Product ("タイ", 2000, "魚"),
+			//	new Product ("キャベツ", 200, "野菜"),
+			//	new Product ("牛バラ", 1000, "肉"),
+			//	new Product ("サバ", 600, "魚")
+			//};
+			//var exProducts = products.Where(p => p.Price >= 1000);
+			//Console.WriteLine("[1000円以上の商品]");
+			//foreach (Product product in exProducts)
+			//{
+			//	Console.WriteLine($"{product.Name}:{product.Price}:円");
+			//}
+			//var groups = products.GroupBy(p => p.Category);
+			//Console.WriteLine("[カテゴリごとの商品数]");
+			//foreach (var group in groups)
+			//{
+			//	Console.WriteLine($"{group.Key}:{group.Count()}個");
+			//}
+			//var sorProducts = products.OrderByDescending(p => p.Price);
+			//Console.WriteLine("[価格の降順]");
+			//foreach (Product product in sorProducts)
+			//{
+			//	Console.WriteLine($"{product.Name}:{product.Price}円");
+			//}
+
+			//7.1.1
+			//7.2.1
+			//7.3.1
+			//7.4.1
+			List<IReportable> reports = new List<IReportable>
 			{
-			new Student("Aoki", 80),
-			new Student("Alice", 90),
-			new Student("Baba", 85),
-			new Student("Abe", 60),
-			new Student("Sato", 75)
+				new FullTimeEmployee("田中", 300000),
+				new PartTimeEmployee("佐藤", 0, 1200, 80)
 			};
-			var result = numbers.Where(
-			student => student.Score >= 70 &&
-			student.Name.StartsWith("A")
-			);
-			foreach (Student student in result)
+
+			foreach (IReportable report in reports)
 			{
-				Console.WriteLine(
-					$"名前：{student.Name} / 点数：{student.Score}点"
-				);
+				Console.WriteLine(report.GenerateReport());
 			}
+			List<Employee> employees = new List<Employee>
+			{
+				new FullTimeEmployee("田中",300000),
+				//new FullTimeEmployee("佐藤",280000),
+				new PartTimeEmployee("佐藤",0,1200,80),
+				//new PartTimeEmployee("山田",0,1500,60)
+			};
+
+			FullTimeEmployee tanaka = (FullTimeEmployee)employees[0];
+			tanaka.AddOvertimeHours(10);
+			foreach (Employee employee in employees)
+			{
+				employee.ShowProfile();
+				Console.WriteLine($"月給：{employee.CalculateMonthlyPay()}円");
+				//Console.WriteLine($"{employee.Name}:{employee.CalculateMonthlyPay()}円");
+				//decimal monthlyPay = employee.CalculateMonthlyPay();
+				//Console.WriteLine($"月給：{monthlyPay}円");
+				//Console.WriteLine();
+				if (employee is IOvertimeEligible overtime)
+				{
+					overtime.AddOvertimeHours(10);
+					Console.WriteLine($"残業時間：{overtime.GetOvertimeHours()}時間");
+				}
+
+				if (employee is IReportable report)
+				{
+					Console.WriteLine(report.GenerateReport());
+				}
+
+				Console.WriteLine();
+			}
+		
+
+
+
+
 
 
 			//    int x = 11;
@@ -1258,20 +1356,20 @@ namespace _20260721_Practice
 			//}
 
 		}
-	//5.11.1
-	//static void Log(string message)
-	//{
-	//	string path = "logs/app.log";
-	//	Directory.CreateDirectory("logs");
-	//	using (StreamWriter writer = new StreamWriter(path, append: true))
-	//	{
-	//		writer.WriteLine($"{DateTime.Now:yyyy - MM - ddThh:mm: ss} {message}");
-	//	}
-	//}
+		//5.11.1
+		//static void Log(string message)
+		//{
+		//	string path = "logs/app.log";
+		//	Directory.CreateDirectory("logs");
+		//	using (StreamWriter writer = new StreamWriter(path, append: true))
+		//	{
+		//		writer.WriteLine($"{DateTime.Now:yyyy - MM - ddThh:mm: ss} {message}");
+		//	}
+		//}
 
 
 
-}
+	}
 
 	//	//5.9.1
 	//	static void PrintUsersTable(List<User> users)
