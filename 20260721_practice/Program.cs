@@ -438,52 +438,170 @@ namespace _20260721_Practice
 			//7.2.1
 			//7.3.1
 			//7.4.1
-			List<IReportable> reports = new List<IReportable>
-			{
-				new FullTimeEmployee("田中", 300000),
-				new PartTimeEmployee("佐藤", 0, 1200, 80)
-			};
+			//7.5.1
+			//Employee emp = new FullTimeEmployee("田中", 30000);
+			//emp.MonthlyRoutine();
+			//List<IReportable> reports = new List<IReportable>
+			//{
+			//	new FullTimeEmployee("田中", 300000),
+			//	new PartTimeEmployee("佐藤", 0, 1200, 80)
+			//};
 
-			foreach (IReportable report in reports)
+			//foreach (IReportable report in reports)
+			//{
+			//	Console.WriteLine(report.GenerateReport());
+			//}
+			//List<Employee> employees = new List<Employee>
+			//{
+			//	new FullTimeEmployee("田中",300000),
+			//	//new FullTimeEmployee("佐藤",280000),
+			//	new PartTimeEmployee("佐藤",0,1200,80),
+			//	//new PartTimeEmployee("山田",0,1500,60)
+			//};
+
+			//FullTimeEmployee tanaka = (FullTimeEmployee)employees[0];
+			//tanaka.AddOvertimeHours(10);
+			//foreach (Employee employee in employees)
+			//{
+			//	employee.ShowProfile();
+			//	Console.WriteLine($"月給：{employee.CalculateMonthlyPay()}円");
+			//	//Console.WriteLine($"{employee.Name}:{employee.CalculateMonthlyPay()}円");
+			//	//decimal monthlyPay = employee.CalculateMonthlyPay();
+			//	//Console.WriteLine($"月給：{monthlyPay}円");
+			//	//Console.WriteLine();
+			//	if (employee is IOvertimeEligible overtime)
+			//	{
+			//		overtime.AddOvertimeHours(10);
+			//		Console.WriteLine($"残業時間：{overtime.GetOvertimeHours()}時間");
+			//	}
+
+			//	if (employee is IReportable report)
+			//	{
+			//		Console.WriteLine(report.GenerateReport());
+			//	}
+
+			//	Console.WriteLine();
+			//}
+
+			////7.8.1
+			//FullTimeEmployee tanakat = new FullTimeEmployee("田中", 300000);
+
+			//tanaka.TaxStrategy = new FlatTaxStrategy();
+			//Console.WriteLine($"一律10%の場合：{tanakat.CalculateMonthlyPay()}円");
+
+			//tanaka.TaxStrategy = new ProgressiveTaxStrategy();
+			//Console.WriteLine($"段階税率の場合：{tanakat.CalculateMonthlyPay()}円");
+
+			////7.9.1
+			//List<IPayable> payables= new List<IPayable>()
+			//{
+			//	new FullTimeEmployee("田中",300000),
+			//	new PartTimeEmployee("佐藤",0,1200,80)
+			//};
+			//foreach (IPayable payable in payables)
+			//{
+			//	payable.Pay();
+			//}
+
+			//7.10.1
+			Console.WriteLine("---簡易給与計算アプリ---");
+			Console.WriteLine("1.社員追加");
+			Console.WriteLine("2.残業登録");
+			Console.WriteLine("3.税方式切替");
+			Console.WriteLine("4.月次処理");
+			Console.WriteLine("5.明細表示");
+			Console.WriteLine("6.終了");
+
+			Console.WriteLine("選択してください");
+			string e = Console.ReadLine();
+			List<Employee> employee = new List<Employee>();
+			switch(e)
 			{
-				Console.WriteLine(report.GenerateReport());
+				case "1":
+					Console.WriteLine("社員の種類を選択してください");
+					Console.WriteLine("1.正社員");
+					Console.WriteLine("2.アルバイト");
+					string emp = Console.ReadLine();
+					Console.WriteLine("名前を入力してください");
+					string name = Console.ReadLine();
+					if (emp == "1")
+					{
+						Console.WriteLine("基本給を入力してください");
+						decimal basesalary = decimal.Parse(Console.ReadLine());
+						FullTimeEmployee empl = new FullTimeEmployee(name, basesalary);
+						employee.Add(empl);
+						Console.WriteLine("正社員を追加しました");
+					}
+					else if (emp == "2")
+					{
+						Console.WriteLine("時給を入力してください");
+						decimal hourlyWage = decimal.Parse(Console.ReadLine());
+						Console.WriteLine("勤務時間を入力してください");
+						int workhours = int.Parse(Console.ReadLine());
+						PartTimeEmployee pt = new PartTimeEmployee(name, 0, hourlyWage, workhours);
+						employee.Add(pt);
+						Console.WriteLine("アルバイトを追加しました");
+					}
+					else 
+					{
+						Console.WriteLine("正しい番号を入力してください");
+					}
+					break;
+
+				case "2":
+					Console.WriteLine("残業登録する社員名");
+					string empname = Console.ReadLine();
+					Employee empfind = employee.Find(e => e.Name == empname);
+					if (employee == null)
+					{
+						Console.WriteLine("その社員は見つかりません");
+					}
+					if (employee is IOvertimeEligible overtime)
+					{
+						Console.WriteLine("残業時間を入力してください");
+						int hours = int.Parse(Console.ReadLine());
+						overtime.AddOvertimeHours(hours);
+						Console.WriteLine("残業時間を登録しました");
+					}
+					else 
+					{
+					Console.WriteLine("この社員は登録できません");
+					}
+					break;
+
+				case "3":
+					break;
+
+				case "4":
+					break;
+
+				case "5":
+					break;
+
+				case "6":
+					break;
+
+
 			}
-			List<Employee> employees = new List<Employee>
-			{
-				new FullTimeEmployee("田中",300000),
-				//new FullTimeEmployee("佐藤",280000),
-				new PartTimeEmployee("佐藤",0,1200,80),
-				//new PartTimeEmployee("山田",0,1500,60)
-			};
 
-			FullTimeEmployee tanaka = (FullTimeEmployee)employees[0];
-			tanaka.AddOvertimeHours(10);
-			foreach (Employee employee in employees)
-			{
-				employee.ShowProfile();
-				Console.WriteLine($"月給：{employee.CalculateMonthlyPay()}円");
-				//Console.WriteLine($"{employee.Name}:{employee.CalculateMonthlyPay()}円");
-				//decimal monthlyPay = employee.CalculateMonthlyPay();
-				//Console.WriteLine($"月給：{monthlyPay}円");
-				//Console.WriteLine();
-				if (employee is IOvertimeEligible overtime)
-				{
-					overtime.AddOvertimeHours(10);
-					Console.WriteLine($"残業時間：{overtime.GetOvertimeHours()}時間");
-				}
+			
 
-				if (employee is IReportable report)
-				{
-					Console.WriteLine(report.GenerateReport());
-				}
-
-				Console.WriteLine();
-			}
-		
-
-
-
-
+			//7.6.1
+			//Employee empl = new FullTimeEmployee("田中",1000);
+			//empl.CalculateMonthlyPay();
+			//FullTimeEmployee fte1 = (FullTimeEmployee)emp;
+			//fte1.AddOvertimeHours(10);
+			//FullTimeEmployee? fte2 = emp as FullTimeEmployee;
+			//if (fte2 != null)
+			//{ 
+			//fte2.AddOvertimeHours(10);
+			//}
+			////失敗時（FullTimeEmployee出ない場合）、asはnullを返す
+			//if (emp is FullTimeEmployee fte3)
+			//{
+			//	fte3.AddOvertimeHours(10);
+			//}
+			////失敗時（FullTimeEmployeeでない場合）ifの中は実行されない
 
 
 			//    int x = 11;
