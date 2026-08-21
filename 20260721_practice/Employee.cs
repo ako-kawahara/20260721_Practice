@@ -14,7 +14,8 @@ namespace _20260721_Practice
         {
             Name = name;
             BaseSalary = baseSalary;
-        }
+			TaxStrategy = new FlatTaxStrategy();
+		}
         public void ShowProfile()
         {
             Console.WriteLine($"氏名:{Name}");

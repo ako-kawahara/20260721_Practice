@@ -2,6 +2,7 @@
 using System.Data.Common;
 using System.Diagnostics.CodeAnalysis;
 using System.IO;
+using System.Linq.Expressions;
 using System.Net.Cache;
 using System.Reflection.Metadata;
 using System.Reflection.Metadata.Ecma335;
@@ -10,6 +11,7 @@ using System.Security;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Timers;
+using System.Linq;
 
 namespace _20260721_Practice
 {
@@ -504,87 +506,284 @@ namespace _20260721_Practice
 			//}
 
 			//7.10.1
-			Console.WriteLine("---簡易給与計算アプリ---");
-			Console.WriteLine("1.社員追加");
-			Console.WriteLine("2.残業登録");
-			Console.WriteLine("3.税方式切替");
-			Console.WriteLine("4.月次処理");
-			Console.WriteLine("5.明細表示");
-			Console.WriteLine("6.終了");
+			//		List<Employee> employee = new List<Employee>();
+			//while (true)
+			//{
+			//	try
+			//	{
+			//		Console.WriteLine("---簡易給与計算アプリ---");
+			//		Console.WriteLine("1.社員追加");
+			//		Console.WriteLine("2.残業登録");
+			//		Console.WriteLine("3.税方式切替");
+			//		Console.WriteLine("4.月次処理");
+			//		Console.WriteLine("5.明細表示");
+			//		Console.WriteLine("6.終了");
 
-			Console.WriteLine("選択してください");
-			string e = Console.ReadLine();
-			List<Employee> employee = new List<Employee>();
-			switch(e)
+			//		Console.WriteLine("選択してください");
+			//		string e = Console.ReadLine();
+			//		switch (e)
+			//		{
+			//			case "1":
+			//				Console.WriteLine("社員の種類を選択してください");
+			//				Console.WriteLine("1.正社員");
+			//				Console.WriteLine("2.アルバイト");
+			//				string emp = Console.ReadLine();
+			//				Console.WriteLine("名前を入力してください");
+			//				string name = Console.ReadLine();
+			//				if (emp == "1")
+			//				{
+			//					Console.WriteLine("基本給を入力してください");
+			//					decimal basesalary = decimal.Parse(Console.ReadLine());
+			//					FullTimeEmployee empl = new FullTimeEmployee(name, basesalary);
+			//					employee.Add(empl);
+			//					Console.WriteLine("正社員を追加しました");
+			//				}
+			//				else if (emp == "2")
+			//				{
+			//					Console.WriteLine("時給を入力してください");
+			//					decimal hourlyWage = decimal.Parse(Console.ReadLine());
+			//					Console.WriteLine("勤務時間を入力してください");
+			//					int workhours = int.Parse(Console.ReadLine());
+			//					PartTimeEmployee pt = new PartTimeEmployee(name, 0, hourlyWage, workhours);
+			//					employee.Add(pt);
+			//					Console.WriteLine("アルバイトを追加しました");
+			//				}
+			//				else
+			//				{
+			//					Console.WriteLine("正しい番号を入力してください");
+			//				}
+			//				break;
+
+			//			case "2":
+			//				Console.WriteLine("残業登録する社員名");
+			//				string empName = Console.ReadLine();
+			//				Employee empfind = employee.Find(e => e.Name == empName);
+			//				if (empfind == null)
+			//				{
+			//					Console.WriteLine("その社員は見つかりません");
+			//				}
+			//				if (employee is IOvertimeEligible overtime)
+			//				{
+			//					Console.WriteLine("残業時間を入力してください");
+			//					int hours = int.Parse(Console.ReadLine());
+			//					overtime.AddOvertimeHours(hours);
+			//					Console.WriteLine("残業時間を登録しました");
+			//				}
+			//				else
+			//				{
+			//					Console.WriteLine("この社員は登録できません");
+			//				}
+			//				break;
+
+			//			case "3":
+			//				Console.WriteLine("税方式を変更します");
+			//				Console.WriteLine("1. 全員");
+			//				Console.WriteLine("2. 個別");
+
+			//				string target = Console.ReadLine();
+
+			//				Console.WriteLine("税方式を選択してください");
+			//				Console.WriteLine("1. 一律10%");
+			//				Console.WriteLine("2. 段階税率");
+
+			//				string taxChoice = Console.ReadLine();
+
+			//				ITaxStrategy taxStrategy;
+
+			//				if (taxChoice == "1")
+			//				{
+			//					taxStrategy = new FlatTaxStrategy();
+			//				}
+			//				else if (taxChoice == "2")
+			//				{
+			//					taxStrategy = new ProgressiveTaxStrategy();
+			//				}
+			//				else
+			//				{
+			//					Console.WriteLine("正しい番号を入力してください");
+			//					break;
+			//				}
+
+			//				if (target == "1")
+			//				{
+			//					foreach (Employee empm in employee)
+			//					{
+			//						empm.TaxStrategy = taxStrategy;
+			//					}
+
+			//					Console.WriteLine("全員の税方式を変更しました");
+			//				}
+			//				else if (target == "2")
+			//				{
+			//					Console.WriteLine("税方式を変更する社員名");
+			//					string strName = Console.ReadLine();
+
+			//					Employee strfind = employee.Find(x => x.Name == strName);
+
+			//					if (strfind == null)
+			//					{
+			//						Console.WriteLine("この社員は見つかりません");
+			//						break;
+			//					}
+
+			//					strfind.TaxStrategy = taxStrategy;
+
+			//					Console.WriteLine("税方式を変更しました");
+			//				}
+			//				else
+			//				{
+			//					Console.WriteLine("正しい番号を入力してください");
+			//				}
+
+			//				break;
+			//			case "4":
+			//				foreach (Employee empm in employee)
+			//				{
+			//					empm.MonthlyRoutine();
+			//					if (empm is IPayable payable)
+			//					{
+			//						payable.Pay();
+			//					}
+			//				}
+			//				break;
+
+			//			case "5":
+			//				Console.WriteLine("明細を表示します");
+			//				foreach (Employee empg in employee)
+			//				{
+			//					if (empg is IReportable reportable)
+			//					{
+			//						Console.WriteLine(reportable.GenerateReport());
+			//					}
+			//				}
+			//				break;
+
+			//			case "6":
+			//				Console.WriteLine("終了します");
+			//				return;
+			//		}
+			//	}
+			//		catch (Exception ex)
+			//	{
+			//		Console.WriteLine("入力に誤りがあります");
+			//	}
+
+
+			//}
+
+			//8.1
+			//try
+			//{
+			//	Console.WriteLine("数値1を入力してください");
+			//	int num1 = int.Parse(Console.ReadLine());
+			//	Console.WriteLine("演算子を入力してください");
+			//	string en = Console.ReadLine();
+			//	Console.WriteLine("数値２を入力してください");
+			//	int num2 = int.Parse(Console.ReadLine());
+
+			//	switch (en)
+			//	{
+			//		case "+":
+			//			Console.WriteLine(num1 + num2);
+			//			break;
+
+			//		case "-":
+			//			Console.WriteLine(num1 - num2);
+			//			break;
+
+			//		case "*":
+			//			Console.WriteLine(num1 * num2);
+			//			break;
+
+			//		case "/":
+			//			Console.WriteLine(num1 / num2);
+			//			break;
+
+			//		default:
+			//			Console.WriteLine("正しい演算子を入力してください");
+			//			break;
+
+			//	}
+			//} catch (FormatException)
+			//{
+			//	Console.WriteLine("数値を入力してください");
+			//}
+			//catch (DivideByZeroException)
+			//{
+			//	Console.WriteLine("0で割ることはできません");
+			//}
+
+			//8.2
+			//while (true)
+			//{
+			//	Console.WriteLine("1.登録");
+			//	Console.WriteLine("2.一覧表示");
+			//	Console.WriteLine("3.検索");
+			//	Console.WriteLine("4.終了");
+			//	string choice = Console.ReadLine();
+			//	switch (choice)
+			//	{
+			//		case "1":
+			//			Console.WriteLine("単語を入力してください");
+			//			string word = Console.ReadLine();
+			//			Console.WriteLine("意味を入力してください");
+			//			string mean = Console.ReadLine();
+			//			File.AppendAllText("words.csv", word + "," + mean + Environment.NewLine);
+			//			Console.WriteLine("登録しました");
+			//			break;
+
+			//		case "2":
+			//			string[] lines = File.ReadAllLines("words.csv");
+			//			foreach (string line in lines)
+			//			{
+			//				Console.WriteLine(line);
+			//			}
+			//			break;
+
+			//		case "3":
+			//			Console.WriteLine("検索したい単語を入力してください");
+			//			string search = Console.ReadLine();
+			//			string[] l = File.ReadAllLines("words.csv");
+			//			foreach (string line in l)
+			//			{
+			//				if (line.StartsWith(search + ","))
+			//				{
+			//					Console.WriteLine(line);
+			//				}
+			//			}
+			//			break;
+
+			//		case "4.":
+			//			Console.WriteLine("終了します");
+			//			return;
+
+			//	}
+			//}
+
+			//8.3
+
+				List<Product> products = new List<Product>();
+			while (true)
 			{
-				case "1":
-					Console.WriteLine("社員の種類を選択してください");
-					Console.WriteLine("1.正社員");
-					Console.WriteLine("2.アルバイト");
-					string emp = Console.ReadLine();
-					Console.WriteLine("名前を入力してください");
-					string name = Console.ReadLine();
-					if (emp == "1")
-					{
-						Console.WriteLine("基本給を入力してください");
-						decimal basesalary = decimal.Parse(Console.ReadLine());
-						FullTimeEmployee empl = new FullTimeEmployee(name, basesalary);
-						employee.Add(empl);
-						Console.WriteLine("正社員を追加しました");
-					}
-					else if (emp == "2")
-					{
-						Console.WriteLine("時給を入力してください");
-						decimal hourlyWage = decimal.Parse(Console.ReadLine());
-						Console.WriteLine("勤務時間を入力してください");
-						int workhours = int.Parse(Console.ReadLine());
-						PartTimeEmployee pt = new PartTimeEmployee(name, 0, hourlyWage, workhours);
-						employee.Add(pt);
-						Console.WriteLine("アルバイトを追加しました");
-					}
-					else 
-					{
-						Console.WriteLine("正しい番号を入力してください");
-					}
-					break;
-
-				case "2":
-					Console.WriteLine("残業登録する社員名");
-					string empname = Console.ReadLine();
-					Employee empfind = employee.Find(e => e.Name == empname);
-					if (employee == null)
-					{
-						Console.WriteLine("その社員は見つかりません");
-					}
-					if (employee is IOvertimeEligible overtime)
-					{
-						Console.WriteLine("残業時間を入力してください");
-						int hours = int.Parse(Console.ReadLine());
-						overtime.AddOvertimeHours(hours);
-						Console.WriteLine("残業時間を登録しました");
-					}
-					else 
-					{
-					Console.WriteLine("この社員は登録できません");
-					}
-					break;
-
-				case "3":
-					break;
-
-				case "4":
-					break;
-
-				case "5":
-					break;
-
-				case "6":
-					break;
-
-
+				Console.WriteLine("商品名を登録してください");
+				string name = Console.ReadLine();
+				Console.WriteLine("価格を登録してください");
+				int price = int.Parse(Console.ReadLine());
+				Console.WriteLine("カテゴリを登録してください");
+				string category = Console.ReadLine();
+				Product product = new Product(name, price, category);
+				products.Add(product);
+				Console.WriteLine("商品を登録しました");
+				foreach (Product pro in products)
+				{
+					Console.WriteLine($"商品名：{product.Name}価格：{product.Price}カテゴリ：{product.Category}");
+				}
+				var result = products.OrderByDescending(p => p.Price);
+				foreach (Product prod in result)
+				{
+					Console.WriteLine($"{prod.Name}:{prod.Price}円");
+				}
 			}
-
-			
 
 			//7.6.1
 			//Employee empl = new FullTimeEmployee("田中",1000);
