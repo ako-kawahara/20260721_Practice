@@ -12,6 +12,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Timers;
 using System.Linq;
+using System.ComponentModel;
 
 namespace _20260721_Practice
 {
@@ -762,28 +763,537 @@ namespace _20260721_Practice
 
 			//8.3
 
-				List<Product> products = new List<Product>();
+			//	List<Product> products = new List<Product>();
+			//while (true)
+			//{
+			//	Console.WriteLine("---商品管理---");
+			//	Console.WriteLine("1.商品登録");
+			//	Console.WriteLine("2.一覧表示");
+			//	Console.WriteLine("3.価格の高い順");
+			//	Console.WriteLine("4.カテゴリごとに表示");
+			//	Console.WriteLine("5.終了");
+			//	Console.WriteLine("選択してください");
+
+			//	string choice = Console.ReadLine();
+			//	switch (choice)
+			//	{
+			//		case "1":
+			//			Console.WriteLine("商品名を登録してください");
+			//			string name = Console.ReadLine();
+			//			Console.WriteLine("価格を登録してください");
+			//			int price = int.Parse(Console.ReadLine());
+			//			Console.WriteLine("カテゴリを登録してください");
+			//			string category = Console.ReadLine();
+			//			Product product = new Product(name, price, category);
+			//			products.Add(product);
+			//			Console.WriteLine("商品を登録しました");
+			//			break;
+
+			//		case "2":
+			//			foreach (Product pro in products)
+			//			{
+			//				Console.WriteLine($"商品名：{pro.Name}価格：{pro.Price}カテゴリ：{pro.Category}");
+			//			}
+			//			break;
+
+			//		case "3":
+			//			var result = products.OrderByDescending(p => p.Price);
+			//			foreach (Product prod in result)
+			//			{
+			//				Console.WriteLine($"{prod.Name}:{prod.Price}円");
+			//			}
+			//			break;
+
+			//		case "4":
+			//			var groups = products.GroupBy(p => p.Category);
+
+			//			foreach (var group in groups)
+			//			{
+			//				Console.WriteLine($"【{group.Key}】");
+
+			//				foreach (Product prod in group)
+			//				{
+			//					Console.WriteLine($"{prod.Name}:{prod.Price}円");
+			//				}
+			//			}
+			//			break;
+			//		case "5":
+			//			Console.WriteLine("終了します");
+			//			return;
+
+			//		default:
+			//			Console.WriteLine("正しい番号を入力してください");
+			//			break;
+			//	}
+
+			//	}
+
+			//8.4
+			//List<Book> book = new List<Book>();
+			//while(true)
+			//{
+			//Console.WriteLine("【図書館貸出アプリ】");
+			//Console.WriteLine("1.本の登録");
+			//Console.WriteLine("2.貸出/返却 の変更");
+			//Console.WriteLine("3.一覧表示");
+			//Console.WriteLine("4.終了");
+			//string choice = Console.ReadLine();
+
+			//	switch (choice)
+			//	{
+			//		case "1":
+			//			Console.WriteLine("タイトルを入力してください");
+			//			string title = Console.ReadLine();
+
+			//			Console.WriteLine("著者を入力してください");
+			//			string author = Console.ReadLine();
+
+			//			Book newBook = new Book(title,author);
+			//			book.Add(newBook);
+
+
+			//			Console.WriteLine("本を登録しました");
+			//			break;
+
+			//		case "2":
+			//			Console.WriteLine("変更する本のタイトルを入力してください");
+			//			string tit = Console.ReadLine();
+			//			Book target = book.Find(b => b.Title == tit);
+			//			if (target == null)
+			//			{
+			//				Console.WriteLine("その本は見つかりません");
+			//				break;
+			//			}
+			//			if (target.IsBorrowed == false)
+			//			{
+			//				target.IsBorrowed = true;
+			//				Console.WriteLine("貸し出しました");
+			//			}
+			//			else 
+			//			{
+			//				target.IsBorrowed = false;
+			//				Console.WriteLine("返却しました");
+			//			}
+			//			break;
+
+			//		case "3":
+			//			foreach (Book b in book)
+			//			{
+			//				string status;
+
+			//				if (b.IsBorrowed)
+			//				{
+			//					status = "貸出中";
+			//				}
+			//				else
+			//				{
+			//					status = "利用可能";
+			//				}
+
+			//				Console.WriteLine($"タイトル：{b.Title} 著者：{b.Author} 状態：{status}");
+			//			}
+			//			break;
+
+			//			case"4":
+			//				Console.WriteLine("終了します");
+			//			return;
+
+			//	}
+			//}
+
+			//8.5
+
+			List<Drink> drinks = new List<Drink>();
+			drinks.Add(new Drink(1, "コーラ", 170, 30));
+			drinks.Add(new Drink(2, "ポカリ", 180, 8));
+			drinks.Add(new Drink(3, "麦茶", 120, 15));
+			int tenStock = 10;
+			int fiftyStock = 10;
+			int hundredStock = 10;
+			int fiveHundredStock = 5;
+			int sales = 0;
+			int sum = 0;
 			while (true)
 			{
-				Console.WriteLine("商品名を登録してください");
-				string name = Console.ReadLine();
-				Console.WriteLine("価格を登録してください");
-				int price = int.Parse(Console.ReadLine());
-				Console.WriteLine("カテゴリを登録してください");
-				string category = Console.ReadLine();
-				Product product = new Product(name, price, category);
-				products.Add(product);
-				Console.WriteLine("商品を登録しました");
-				foreach (Product pro in products)
+			Console.WriteLine("[ 商品一覧 ]");
+			foreach (Drink drink in drinks)
+			Console.WriteLine($"番号：{drink.Number} 名前：{drink.Name} 価格：{drink.Price} 在庫：{drink.Stock}");
+			Console.WriteLine("操作を選んでください");
+			Console.WriteLine("1.お金を入れる（10/50/100/500/1000 円のみ受付）");
+			Console.WriteLine("2.購入する（商品番号を指定）");
+			Console.WriteLine("3.返金する");
+			Console.WriteLine("4.返金（投入金を払い戻す）");
+			string choice = Console.ReadLine();
+				
+					switch (choice)
 				{
-					Console.WriteLine($"商品名：{product.Name}価格：{product.Price}カテゴリ：{product.Category}");
+					case "1":
+
+						Console.WriteLine("何円を入れますか？");
+							Console.WriteLine("10 / 50 / 100 / 500 / 1000");
+							string moneyInput = Console.ReadLine();
+
+							if (!int.TryParse(moneyInput, out int money))
+							{
+								Console.WriteLine("数字を入力してください。");
+								break;
+							}
+
+							if (money != 10 &&
+								money != 50 &&
+								money != 100 &&
+								money != 500 &&
+								money != 1000)
+							{
+								Console.WriteLine("その金種は使用できません。");
+								break;
+							}
+
+							sum += money;
+
+							if (money == 10)
+							{
+								tenStock++;
+							}
+							else if (money == 50)
+							{
+								fiftyStock++;
+							}
+							else if (money == 100)
+							{
+								hundredStock++;
+							}
+							else if (money == 500)
+							{
+								fiveHundredStock++;
+							}
+
+							Console.WriteLine($"{money}円を受け付けました。");
+							Console.WriteLine($"現在の投入金額：{sum}円");
+							break;
+
+					case "2":
+							Console.WriteLine("何番の商品を購入しますか？");
+
+							if (!int.TryParse(Console.ReadLine(), out int num))
+							{
+								Console.WriteLine("数字を入力してください。");
+								break;
+							}
+
+							Drink selectDrink = null;
+
+							foreach (Drink drink in drinks)
+							{
+								if (drink.Number == num)
+								{
+									selectDrink = drink;
+									break;
+								}
+							}
+							if (selectDrink == null)
+							{
+								Console.WriteLine("その商品番号はありません。");
+								break;
+							}
+
+							if (selectDrink.Stock <= 0)
+							{
+								Console.WriteLine("在庫がありません。");
+								break;
+							}
+							if (sum < selectDrink.Price)
+							{
+								Console.WriteLine("お金が足りません。");
+								break;
+							}
+
+							int change = sum - selectDrink.Price;
+
+							int remainingChange = change;
+
+							int use500 = Math.Min(
+								remainingChange / 500,
+								fiveHundredStock);
+
+							remainingChange -= use500 * 500;
+							int use100 = Math.Min(
+						   remainingChange / 100,
+						   hundredStock);
+
+							remainingChange -= use100 * 100;
+
+							int use50 = Math.Min(
+								remainingChange / 50,
+								fiftyStock);
+
+							remainingChange -= use50 * 50;
+
+							int use10 = Math.Min(
+								remainingChange / 10,
+								tenStock);
+
+							remainingChange -= use10 * 10;
+
+							if (remainingChange != 0)
+							{
+								Console.WriteLine("釣銭が不足しているため、購入できません。");
+								break;
+							}
+
+
+							selectDrink.Stock--;
+
+							sales += selectDrink.Price;
+							fiveHundredStock -= use500;
+							hundredStock -= use100;
+							fiftyStock -= use50;
+							tenStock -= use10;
+
+							Console.WriteLine();
+							Console.WriteLine($"{selectDrink.Name}を購入しました。");
+							Console.WriteLine($"価格：{selectDrink.Price}円");
+							Console.WriteLine($"おつり：{change}円");
+
+							if (use500 > 0)
+							{
+								Console.WriteLine($"500円玉：{use500}枚");
+							}
+
+							if (use100 > 0)
+							{
+								Console.WriteLine($"100円玉：{use100}枚");
+							}
+
+							if (use50 > 0)
+							{
+								Console.WriteLine($"50円玉：{use50}枚");
+							}
+
+							if (use10 > 0)
+							{
+								Console.WriteLine($"10円玉：{use10}枚");
+							}
+							sum = 0;
+
+							break;
+
+							
+
+					case "3":
+						if (sum == 0)
+						{
+							Console.WriteLine("返金するお金がありません。");
+							break;
+						}
+
+						Console.WriteLine($"{sum}円を返金します。");
+
+						sum = 0;
+
+						break;
+
+
+					case "4":
+						Console.WriteLine("アプリを終了します。");
+						Console.WriteLine($"本日の売上：{sales}円");
+
+						return;
+
+
+					default:
+
+						Console.WriteLine("1～4を入力してください。");
+
+						return;
+
 				}
-				var result = products.OrderByDescending(p => p.Price);
-				foreach (Product prod in result)
+				//2.1.1
+				//Console.WriteLine("Hello, World!");
+
+				//2.1.2
+				//int x = 11;
+				//Console.WriteLine("x = " + x);
+
+				//2.1.3
+				//int x = 13 + 17;
+				//Console.WriteLine(x);
+
+				//2.1.4
+				//int x = 13 * 17;
+				//Console.WriteLine(x);
+
+				//2.2.1
+				//Console.WriteLine(s);
+
+				//2.2.2
+				//int x = 7;
+				//Console.WriteLine(x);
+
+				//2.2.4
+				//Console.WriteLine("年齢はいくつですか？");
+				//int year = int.Parse(Console.ReadLine());
+				//Console.WriteLine(year * 365 +　"日");
+
+				//2.3.1
+				//Console.WriteLine("xを入力してください");
+				//int x = int.Parse(Console.ReadLine());
+				//Console.WriteLine("yを入力してください");
+				//int y = int.Parse(Console.ReadLine());
+				//if (x > y)
+				//{
+				//	Console.WriteLine("xはyより大きい");
+				//}
+				////2.3.2
+				//else if (y > x)
+				//{
+				//	Console.WriteLine("xはyより小さい");
+				//}
+				//else
+				//{
+				//	Console.WriteLine("xとyは等しい");
+				//}
+
+				////2.3.3
+				//Console.WriteLine("数値を入力してください");
+				//int x = int.Parse(Console.ReadLine());
+				//if (x % 2 == 0)
+				//{
+				//	Console.WriteLine("偶数");
+				//}
+				//else
+				//{
+				//	Console.WriteLine("奇数");
+				//}
+
+				//2.3.4
+				//Console.WriteLine("点数を入力してください");
+				//int x = int.Parse(Console.ReadLine());
+				//if (60 <= x)
+				//{
+				//	Console.WriteLine("合格");
+				//}
+				//else 
+				//{
+				//	Console.WriteLine("不合格");
+				//}
+
+				//Console.WriteLine("点数を入力してください");
+				//int y = int.Parse(Console.ReadLine());
+				//if (80 <= y)
+				//{
+				//	Console.WriteLine("たいへんよくできました");
+				//}
+				//else if (60 <= y)
+				//{
+				//	Console.WriteLine("よくできました");
+				//}
+				//else
+				//{ 
+				//Console.WriteLine("ざんねんでした");
+				//}
+
+				//Console.WriteLine("点数を入力してください");
+				//int z = int.Parse(Console.ReadLine());
+				//if (80 <= z)
+				//{
+				//	Console.WriteLine("優");
+				//}
+				//else if (70 <= z)
+				//{
+				//	Console.WriteLine("良");
+				//}
+				//else if (60 <= z)
+				//{
+				//	Console.WriteLine("可");
+				//}
+				//else
+				//{ 
+				//Console.WriteLine("不可");
+				//}
+
+				//2.3.5
+				//Console.WriteLine("整数xを入力してください");
+				//int x = int.Parse(Console.ReadLine());
+				//Console.WriteLine("整数yを入力してください");
+				//int y = int.Parse(Console.ReadLine());
+				//if ( x < y && x % 2 ==0 && y % 2 == 0)
+				//{
+				//	Console.WriteLine("xはyより小さく、かつ、xとyは共に偶数である。");
+				//}
+				//if ( x == y && x < 0 && y < 0)
+				//{
+				//	Console.WriteLine("xとyは等しく、かつ、負の数である。");
+				//}
+				//if ( x < y || x % 2 == 0)
+				//{
+				//	Console.WriteLine("xはyより小さい、または、xは偶数である。");
+				//}
+				//if (( x <= 10 || x >= 100) && (y >= 10 && y <= 100))
+				//{
+				//	Console.WriteLine("xは10以下または100以上で、かつ、yは10以上かつ100以下である。");
+				//}
+				//if (!( x < 0 && y < 0))
+				//{
+				//	Console.WriteLine("xもyも負の数である、ではない。");
+				//}
+
+				//2.3.6
+				//Console.WriteLine("お好きな寿司を選んでください");
+				//Console.WriteLine("1:まぐろ 2:えび 3:こはだ 4:あなご 5:いくら");
+				//string num = Console.ReadLine();
+				//switch (num)
+				//{
+				//	case "1":
+				//		Console.WriteLine("今日のあなたはリーダー運が好調です。積極的に行動しましょう！");
+				//		break;
+
+				//	case "2":
+				//		Console.WriteLine("周囲との協力が運気アップの鍵です。困ったときは相談してみましょう！\r\n");
+				//		break;
+
+				//	case "3":
+				//		Console.WriteLine("新しい知識を身につけるのに最適な一日です。");
+				//		break;
+
+				//	case "4":
+				//		Console.WriteLine("焦らずゆっくり進めることで良い結果につながります。");
+				//		break;
+
+				//	case "5":
+				//		Console.WriteLine("思わぬ幸運が舞い込むかもしれません。チャンスを逃さないようにしましょう！");
+				//		break;
+
+				//}
+
+
+				//2.4.1
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	Console.WriteLine("SPAM");
+				//}
+
+				//2.4.2
+				//for (int i = 1; i < 10; i++)
+				//{ 
+				//	Console.WriteLine(i * 3);
+				//}
+
+				//2.4.3
+				int sum = 0;
+				for (int i = 0; i < 10; i++)
 				{
-					Console.WriteLine($"{prod.Name}:{prod.Price}円");
+					Console.WriteLine("整数を入力してください");
+					int n = int.Parse(Console.ReadLine());
+					sum += n;
 				}
+				Console.WriteLine(sum / 10);
+
+
 			}
+
+
+
 
 			//7.6.1
 			//Employee empl = new FullTimeEmployee("田中",1000);
