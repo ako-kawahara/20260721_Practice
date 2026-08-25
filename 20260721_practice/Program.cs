@@ -1289,900 +1289,1177 @@ namespace _20260721_Practice
 				}
 				Console.WriteLine(sum / 10);
 
+				//2.4.4
+				//Console.WriteLine("【試合開始！】");
+				//int sumK = 0;
+				//int sumH = 0;
+				//for (int i = 1; i < 10; i++)
+				//{
+				//	Console.WriteLine($"{i}回表、巨人の得点は？");
+				//	int kyojinn = int.Parse(Console.ReadLine());
+				//	sumK += kyojinn;
+				//	Console.WriteLine($"{i}回裏、阪神の得点は？");
+				//	int hannsinn = int.Parse(Console.ReadLine());
+				//	sumH += hannsinn;
+				//}
+				//Console.WriteLine($"巨人：{sumK}点,阪神{sumH}点");
+				//if (sumK < sumH)
+				//{
+				//	Console.WriteLine("阪神の勝ち");
+				//}
+				//else
+				//{
+				//	Console.WriteLine("巨人の勝ち");
+				//}
+
+				//2.4.5
+				//2.4.6
+				//int s = 0;
+				//int b = 0;
+				//while (s < 3 && b < 4)
+				//{
+				//	Console.WriteLine("ストライク=1 or ボール=2 or ファウル=3？");
+				//	int sb = int.Parse(Console.ReadLine());
+				//	if (sb == 1)
+				//	{
+				//		s++;
+				//	}
+
+				//	else if (sb == 2)
+				//	{
+				//		b++;
+				//	}
+				//	else if (sb == 3)
+				//	{
+				//		if (s < 2)
+				//		{
+				//			s++;
+				//		}
+				//	}
+				//}
+				//Console.WriteLine($"{b}ボール、{s}ストライク");
+
+				//2.5.1
+				//int [] nums = new int [10];
+				//Console.WriteLine("10個の整数を入力してください");
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	nums[i] = int.Parse(Console.ReadLine());
+				//}
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	Console.WriteLine(nums[i] * 2);
+				//}
+
+				//2.5.2
+				//int[] nums = new int[10];
+				//Console.WriteLine("10個の整数を入力してください");
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	nums[i] = int.Parse(Console.ReadLine());
+				//}
+				//int[] numg = new int[10];
+				//int[] numk = new int[10];
+				//int g = 0;
+				//int k = 0; 
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	if (nums[i] % 2 == 0)
+				//	{
+				//		numg[g] = nums[i];
+				//		g++;
+				//	}
+				//	else
+				//		{
+				//		numk[k] = nums[i];
+				//		k++;
+				//		}
+				//}
+				//Console.WriteLine("偶数");
+				//for (int i = 0; i < g; i++)
+				//{
+				//	Console.WriteLine(numg[i]);
+				//}
+				//Console.WriteLine("奇数");
+				//for(int i = 0; i < k; i++){ 
+				//Console.WriteLine(numk[i]);
+				//}
+
+				//2.5.3
+				//int[,] kuku = new int[9, 9];
+
+				//for (int i = 0; i < 9; i++)
+				//{
+				//	for (int j = 0; j < 9; j++)
+				//	{
+				//		kuku[i, j] = (i + 1) * (j + 1);
+				//	}
+				//}
+
+				//for (int i = 0; i < 9; i++)
+				//{
+				//	for (int j = 0; j < 9; j++)
+				//		Console.Write(" {0,2}", kuku[i, j]);
+
+				//	Console.WriteLine();
+				//}
+
+				//2.5.4
+				//Console.WriteLine("整数を10回入力してください");
+				//int[] nums = new int[10];
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	nums[i] = int.Parse(Console.ReadLine());
+				//}
+				//for (int i = 0; i < 9; i++)
+				//{
+				//	for (int j = i + 1; j < 10; j++)
+				//	{
+				//		if (nums[i] > nums[j])
+				//		{
+				//			int temp = nums[1];
+				//			nums[i] = nums[j];
+				//			nums[j] = temp;
+				//		}
+				//	}
+				//}
+				//for (int i = 0; i < 10; i++)
+				//{ 
+				//Console.WriteLine(nums[i]);
+				//}
+
+				//2.6.1
+				//int t = int.Parse(Console.ReadLine());
+				//int result = m261(t);			
+				//Console.WriteLine(result);
+
+				//2.6.2
+				//int n = int.Parse(Console.ReadLine());
+				//int m = int.Parse(Console.ReadLine());
+				//int result = m262(n, m);
+				//Console.WriteLine(result);
+
+				//2.6.3
+				//int x = int.Parse(Console.ReadLine());
+				//int y = int.Parse(Console.ReadLine());
+				//int result = m263(x, y);
+				//Console.WriteLine(result);
+
+				//2.6.4
+				//int[] nums = new int[5];
+				//for (int i = 0; i < 5; i++)
+				//{
+				//	Console.WriteLine("数値を入力してください");
+				//	nums[i] = int.Parse(Console.ReadLine());
+				//}
+				//Console.WriteLine("最大値：" + m264(nums));
+				//Console.WriteLine("最小値：" + m264(nums));
+				//Console.WriteLine("平均値：" + GetAverage(nums));
+
+
+				//2.7
+				//Dog dog = new Dog();
+				//dog.Name = "ポチ";
+				//dog.ShowProfile();
+
+				//2.7.2
+				//Dog dog = new Dog();
+				//dog.Name = "タロウ";
+				//dog.Age = 4;
+				//dog.ShowProfile();
+
+				//2.7.3
+				//Dog dog1 = new Dog();
+				//dog1.Name = "ぽこ";
+				//dog1.Age = 4;
+				//Dog dog2 = new Dog();
+				//dog2.Name = "jhon";
+				//dog2.Age = 2;
+				//dog1.ShowProfile();
+				//dog2.ShowProfile();
+
+				//2.7.4
+				//Dog dog1 = new Dog("shiba");
+				//Dog dog2 = new Dog("pu-doru");
+				//Dog dog3 = new Dog("pagu");
+				//dog1.Name = "pino";
+				//dog1.Age = 8;
+
+				//dog2.Name = "sun";
+				//dog2.Age = 5;
+
+				//dog3.Name = "lon";
+				//dog3.Age = 4;
+
+				//dog1.ShowProfile();
+				//dog2.ShowProfile();
+				//dog3.ShowProfile();
+
+				//2.7.5
+
+
 
 			}
 
-
-
-
-			//7.6.1
-			//Employee empl = new FullTimeEmployee("田中",1000);
-			//empl.CalculateMonthlyPay();
-			//FullTimeEmployee fte1 = (FullTimeEmployee)emp;
-			//fte1.AddOvertimeHours(10);
-			//FullTimeEmployee? fte2 = emp as FullTimeEmployee;
-			//if (fte2 != null)
-			//{ 
-			//fte2.AddOvertimeHours(10);
-			//}
-			////失敗時（FullTimeEmployee出ない場合）、asはnullを返す
-			//if (emp is FullTimeEmployee fte3)
+			//2.6.1
+			//static int m261(int t)
 			//{
-			//	fte3.AddOvertimeHours(10);
+			//return t * t;
 			//}
-			////失敗時（FullTimeEmployeeでない場合）ifの中は実行されない
 
-
-			//    int x = 11;
-			//     Console.WriteLine($"x= {x}");
-
-			//       x = 13 + 17;
-			//     Console.WriteLine("x=" + x);
-
-
-			//       x = 13;
-			//     int y = 17;
-			//       Console.WriteLine("x=" + y);
-
-			//        x = 13 * 17;
-			// Console.WriteLine("x=" + x);
-
-			//         m211();
-			//m212();
-			//m213();
-			//m214();
-
-			//m221();
-			//m222();
-			//         Console.WriteLine("m,nを入力してください");
-			//         int m = int.Parse(Console.ReadLine());
-			//int n = int.Parse(Console.ReadLine());
-			//m223(m,n);
-			//         Console.WriteLine("bを入力してください");
-			//       //  int b = int.Parse(Console.ReadLine());
-			////m224(b);
-			//         Console.WriteLine("pを入力してください");
-			//         int p = int.Parse(Console.ReadLine());
-			//         power(p);
-
-			//         int q = int.Parse(Console.ReadLine());
-			//         aaa(q);
-
-			//         Console.WriteLine("ｃを入力してください");
-			//         int c = int.Parse(Console.ReadLine());
-			//         Console.WriteLine(CircleArea(c));
-
-			//         Console.WriteLine("tを入力してください");
-			//         int t = int.Parse(Console.ReadLine());
-			//         ggg(t);
-
-			//         Console.WriteLine("a,bを入力してください");
-			//         int a = int.Parse(Console.ReadLine());
-			//   //      int b = int.Parse(Console.ReadLine());
-			// //        Add(a,b);
-
-			//         Console.WriteLine("numberを入力してください");
-			//         int x = int.Parse(Console.ReadLine());
-			//         bool b = IsEven(x);
-			//         if (b) {
-			//             Console.WriteLine("偶数");
-			//         }else{
-			//             Console.WriteLine("奇数");
-			//         }
-
-			//Console.WriteLine("priceを入力してください");
-			//int price = int.Parse(Console.ReadLine());
-			//Console.WriteLine(CalcTax(price));
-
-			//Console.WriteLine("a,b,cを入力してください");
-			//int a = int.Parse(Console.ReadLine());
-			//int b = int.Parse(Console.ReadLine());
-			//int c = int.Parse(Console.ReadLine());
-			//Console.WriteLine(GetMax(a,b,c));
-
-			//Console.WriteLine("x,yを入力してください");
-			//int x = int.Parse(Console.ReadLine());
-			//int y = int.Parse(Console.ReadLine());
-			//compare(x,y);
-
-			//Console.WriteLine("x,yを入力してください");
-			//int x = int.Parse(Console.ReadLine());
-			//int y = int.Parse(Console.ReadLine());
-			//         number(x,y);
-
-			//         Console.WriteLine("numを入力してください");
-			//         int num = int.Parse(Console.ReadLine());
-			//         even(num);
-
-			//Console.WriteLine("点数を入力してください");
-			//int score = int.Parse(Console.ReadLine());
-			//judge(score);
-
-			//Console.WriteLine("SPAM!!");
-			//Spam();
-
-			//Console.WriteLine("xを入力してください");
-			//int x = int.Parse(Console.ReadLine());
-			//kuku(x);
-
-
-			//int sum = 0;
-			////for (int i = 0; i < 10; i++)
-			//{
-			//    Console.WriteLine("整数を入力してください");
-			//    int a = int.Parse(Console.ReadLine());
-			//    sum += a;
-			//}
-			//int av = avg(sum);
-			//Console.WriteLine("整数を入力してください");
-
-
-			//Console.WriteLine(" 試合開始");
-			//int g = 0;
-			//int t = 0;
-			//bb(g,t);
-
-
-
-
-			//sb();
-
-			//    Number();
-
-			//num();
-
-			// Kuku();
-
-			// sm();
-
-			//int t = int.Parse(Console.ReadLine());
-			//Method(t);
-
-			//	Console.WriteLine("数値を入力してください");
-			//	int num = int.Parse(Console.ReadLine());
-			//	int result = Method(num);
-
-			//	Console.WriteLine(result);
-
-			//Console.WriteLine("二つの整数を入力してください");
-			//int t = int.Parse(Console.ReadLine());
-			//int s = int.Parse(Console.ReadLine());
-
-			//int result = avge(t, s);
-			//Console.WriteLine(result);
-
-			//Console.WriteLine("三つの整数を入力してください");
-			//int x = int.Parse(Console.ReadLine());
-			//         int y = int.Parse(Console.ReadLine());
-			//int z = int.Parse(Console.ReadLine());
-			//int re = com(x,y,z);
-			//         Console.WriteLine(re);
-
-			//Console.WriteLine("数値を入力してください");
-			//int result = San();
-			//Console.WriteLine("入力された最大値は" + result +"です");
-
-			//Console.WriteLine("数値を入力してください");
-			//int re = Min();
-			//Console.WriteLine("入力された最小値は" + re + "です");
-
-
-			//Console.WriteLine("数値を入力してください");
-			//int re = av();
-			//Console.WriteLine("入力された平均値は" + re + "です");
-
-
-			//2.7.5.	問題7-5
-			//2.7.6.	問題7-6
-
-			//	CoinCase coinCase = new CoinCase();
-
-			//	for (int i = 0; i < 10; i++)
+			//2.6.2
+			//static int m262(int n, int m)
 			//	{
-			//		Console.Write("硬貨の種類を入力してください（500,100,50,10,5,1）：");
-			//		int type = int.Parse(Console.ReadLine());
-
-			//		Console.Write("枚数を入力してください：");
-			//		int count = int.Parse(Console.ReadLine());
-
-			//		coinCase.AddCoins(type, count);
-			//	}
-			//	Console.WriteLine($"500円：{coinCase.GetCount(500)}枚");
-			//	Console.WriteLine($"100円：{coinCase.GetCount(100)}枚");
-			//	Console.WriteLine($"50円：{coinCase.GetCount(50)}枚");
-			//	Console.WriteLine($"10円：{coinCase.GetCount(10)}枚");
-			//	Console.WriteLine($"5円：{coinCase.GetCount(5)}枚");
-			//	Console.WriteLine($"1円：{coinCase.GetCount(1)}枚");
-
-			//	Console.WriteLine($"合計金額：{coinCase.GetAmount()}円");
-			//	Console.WriteLine($"総額：{coinCase.GetAmount()}円");
-
-			//2.7.7
-
-			//Cat cat = new Cat();
-			//cat.Name = "タマ";
-			//cat.Age = 10;
-			//cat.ShowProfile();
-			//cat.Sleep();
-
-			//2.7.8
-			//Cat cat = new Cat("クロ", 2);
-			//cat.ShowProfile();
-			//cat.Sleep();
-
-			//Cat cat = new Cat("クロ", 2);
-			//Console.WriteLine(cat.Name);
-			//cat.ShowProfile();
-			//cat.Sleep();
-
-			//2.7.9
-
-			//Dog dog = new Dog("コロ", 7);
-			//Console.WriteLine(dog.Name);
-			//dog.ShowProfile();
-			//dog.Run();
-
-			//2.7.10
-			//Dog dog = new Dog("ジョージ", 4);
-			//dog.ShowProfile();
-			//dog.Speak();
-
-			//Cat cat = new Cat("マロ", 7);
-			//cat.ShowProfile();
-			//cat.Speak();
-
-
-			//2.7.11
-			//Animal[] animals = new Animal[4];
-			//animals[0] = new Cat("ミケ", 2);
-			//animals[1] = new Dog("ポチ", 5);
-			//animals[2] = new Cat("タマ", 1);
-			//animals[3] = new Dog("コロ", 4);
-
-
-			//	foreach (Animal a in animals)
-			//	{
-			//		a.ShowProfile();
-			//		a.Speak();
+			//	return (n + m) / 2;
 			//	}
 
-			//2.8.2
-			//Animal dog = new Dog("ポチ", 3); 
-			//Animal cat = new Cat("タマ", 5); 
-			//Console.WriteLine(dog);
-			//Console.WriteLine(cat);
-
-			////2.8.3
-			//List<Animal> animal = new List<Animal>();
-			//animal.Add(new Dog("ポチ",3));
-			//animal.Add(new Cat("タマ",5));
-			//animal.Add(new Dog("ジョン",7));
-			//animal.Add(new Cat("ねこ", 5));
-
-			//foreach (Animal a in animal)
+			//2.6.3
+			//static int m263(int x, int y)
 			//{
-			//	a.Speak();
-			//	Console.WriteLine(a);
-			//}
-
-			//2.8.4
-			//List<Animal> animal = new List<Animal>
-			//{	
-			//	new Dog("ポチ", 3),
-			//	new Cat("タマ", 5),
-			//	new Dog("ジョン", 7),
-			//	new Cat("ねこ", 5),
-			//	new Bird("ぴよ",8),
-			//	new Bird ("ぽこ",11),
-			//};
-
-			//foreach (Animal a in animal)
-			//{
-			//	Console.WriteLine(a);
-			//	a.Speak();
-			//if (a is Bird b)
-			//{
-			//	b.Fly();
-			//}
-			//}
-
-			//2.8.5
-			//Animal dog = new Dog("ポン", 4);
-			//dog.Walk();
-			//dog.Walk(4);
-
-			//2.8.6
-			//List<Animal> animal = new List<Animal>
-			//{
-			//		new Dog("ポチ", 3),
-			//		new Cat("タマ", 5),
-			//		new Dog("ジョン", 7),
-			//		new Cat("ねこ", 5),
-			//		new Bird("ぴよ",8),
-			//		new Bird ("ぽこ",11),
-			//};
-			//foreach (Animal a in animal)
-			//{
-			//	Console.WriteLine($"{a.Species}{a.Name}{a.Age}");
-			//}
-
-
-
-
-			//Animal animal = new Cat("ミー", 9);
-			//animal.ShowKind();
-			//Cat cat = new Cat("ポン",5);
-			//cat.ShowKind();
-
-			////2.8.8
-			//Animal a = new Dog("ジョン",4);
-			//   ((Dog)a).Run();
-			////失敗すると例外が出る
-
-
-			//Dog dog = a as Dog;
-			//if (dog != null)
-			//{
-			//	dog.Run();
-			//}
-			////安全（null）の場合実行されない
-
-			//if (a is Dog d) d.Run();
-			////現代的で安全
-			///
-
-			//2.8.9
-
-			//List<Animal> animal = new List<Animal>
-			//{
-			//		new Dog("ポチ", 3),
-			//		new Cat("タマ", 5),
-			//		new Dog("ジョン", 7),
-			//		new Cat("ねこ", 5),
-			//		new Bird("ぴよ",8),
-			//		new Bird ("ぽこ",11),
-			//};
-			//foreach (Animal a in animal)
-			//{
-			//	a.DoDaily();
-			//}
-
-			//2.8.10
-
-
-			//Dog.Play();
-
-			//List<IPlayable> animal = new List<IPlayable>
-			//{
-			//		new Dog("ポチ", 3),
-			//		new Cat("タマ", 5),
-			//		new Dog("ジョン", 7),
-			//		new Cat("ねこ", 5),
-			//		new Bird("ぴよ", 8),
-			//		new Bird("ぽこ", 11)
-			//};
-			//foreach (IPlayable a in animal)
-			//{
-			//	a.Play();
-			//}
-
-			//List<Animal> ani = new List<Animal>
-			//{
-			//		new Dog("ポチ", 3),
-			//		new Cat("タマ", 5),
-			//		new Dog("ジョン", 7),
-			//		new Cat("ねこ", 5),
-			//		new Bird("ぴよ",8),
-			//		new Bird ("ぽこ",11),
-			//};
-			//foreach (Animal a in ani)
-			//{
-			//	a.Speak();
-			//}
-
-			//2.8.11
-
-			//List<Animal> animal = new List<Animal>();
-
-			//Console.WriteLine("何匹分入力しますか？");
-			//int n = int.Parse(Console.ReadLine());
-
-			//for (int i = 0; i < n; i++)
-			//{ 
-			//	Console.WriteLine("種類、名称、年齢を一行で入力してください");
-			//	string[] data = Console.ReadLine().Split(' ');
-
-			//	string s = data[0];
-			//	string name = data[1];
-			//	int age = int.Parse(data[2]);
-
-			//	if (s == "Dog")
+			//	if (x > y)
 			//	{
-			//		animal.Add(new Dog(name, age));
+			//		return x;
 			//	}
-			//	else if (s == "Cat")
-			//	{
-			//		animal.Add(new Cat(name, age));
-			//	}
-			//	else if (s == "Bird")
-			//	{
-			//		animal.Add(new Bird(name, age));
-			//	}
-
-			//}
-			//	foreach (Animal a in animal)
-			//	{
-			//		a.Speak();
-			//	}
-
-			//	foreach (Animal a in animal)
-			//	{
-			//		a.ShowProfile();
-			//	}
-
-			//	foreach (Animal a in animal)
-			//	{
-			//	if (a is IPlayable p)
-			//	{
-			//		p.Play();
-			//	}
-			//	}
-
-			//	Dictionary<string, int > count = new Dictionary<string, int>();
-
-			//	foreach (Animal a in animal)
-			//	{
-			//		string type = a.GetType().Name;
-			//		if(count.ContainsKey(type))
-			//			count[type]++;
-			//		else count[type] = 1;
-			//	}
-			//	foreach (var item in count)
-			//	{
-			//		Console.WriteLine($"{item.Key} : {item.Value}");
-			//	}
-
-			//3.1.1
-			//Student s = new Student();
-			//s.Name = "田中";
-			//s.Age = 20;
-			//s.ShowProfile();
-
-			//3.2.1
-			//Season season;
-			//season = Season.Summer;
-			//Console.WriteLine(season);
-			//3.2.1
-			//3.2.2
-			//Console.WriteLine("0～3の数字を入力してください");
-			//	int num = int.Parse(Console.ReadLine());
-			//Season season = (Season)num;
-			//Console.WriteLine(season);
-
-			//3.3.1
-			//Point p = new Point(5, 10);
-			//p.ShowPoint();
-
-			//3.4.1
-			//Counter c1 = new Counter();
-			//Counter c2 = new Counter();
-			//Counter c3 = new Counter();
-
-			//Console.WriteLine(Counter.GetCount());
-			///3.5.1
-			//List<int> numbers = new List<int>();
-
-			//for (int i = 0; i < 5; i++)
-			//{
-			//	Console.Write("整数を入力してください：");
-			//	int num = int.Parse(Console.ReadLine());
-
-			//	numbers.Add(num);
-			//}
-
-			//foreach (int n in numbers)
-			//{
-			//	Console.WriteLine(n);
-			//}
-			//3.5.2
-			//List<string> name = new List<string>();
-			//for (int i = 0; i < 3; i++)
-			//{
-			//	Console.WriteLine("名前を入力してください");
-			//	string n = Console.ReadLine();
-
-			//	name.Add(n);
-			//}
-			//foreach (string n in name)
-			//{
-			//	Console.WriteLine(n);
-			//}
-
-			//3.6.1
-			//Dictionary<string, int> p = new Dictionary<string, int>();
-			//p.Add("wonbin",24);
-			//p.Add("eun", 25);
-			//p.Add("sun",24);
-			//foreach (var key in p)
-			//{
-			//	Console.WriteLine($"{key.Key}:{key.Value}");
-			//}
-
-			//3.7.1
-			//School.Teacher teacher = new School.Teacher();
-			//School.Student student = new School.Student();
-
-			//teacher.Name = "山田先生";
-			//student.Name = "田中さん";
-
-			//teacher.ShowProfile();
-			//student.ShowProfile();
-
-			//4.1.1
-			//try
-			//{
-			//	Console.WriteLine("入力してください");
-			//	int n = int.Parse(Console.ReadLine());
-			//	Console.WriteLine($"入力された整数:{n}");
-			//}
-			//catch (FormatException)
-			//{
-			//	Console.WriteLine("整数を入力してください");
-			//}
-
-			//4.2.1
-			//try
-			//{
-			//	StreamReader sr = new StreamReader("test.txt");
-
-			//	Console.WriteLine("ファイルを開きました");
-
-			//	sr.Close();
-			//}
-			//catch (FileNotFoundException)
-			//{
-			//	Console.WriteLine("ファイルが存在しません");
-			//}
-			//finally
-			//{
-			//	Console.WriteLine("処理を終了します");
-			//}
-
-			//4.3.1
-			//try
-			//{
-			//	int a = 10;
-			//	int b = 0;
-			//	int c = a / b;
-			//}
-			//catch (DivideByZeroException)
-			//{
-			//	Console.WriteLine("0では割れません");
-			//}
-			//try
-			//{
-			//	int[] a = { 1, 2, 3 };
-			//	Console.WriteLine(a[5]);
-			//}
-			//catch(IndexOutOfRangeException)
-			//{
-			//	Console.WriteLine("範囲外のアクセスです");
-			//}
-
-			//4.4.1
-			//	try
-			//	{
-			//		Console.Write("年齢を入力してください：");
-			//		int age = int.Parse(Console.ReadLine());
-
-			//		CheckAge(age);
-			//	}
-			//	catch (ArgumentOutOfRangeException)
-			//	{
-			//		Console.WriteLine("入力が不正です");
-			//	}
-
-			//}
-
-			//4.5.1
-
-
-
-			//4.4.1
-			//static void CheckAge(int age)
-			//{
-			//	if (age < 0 || age > 120)
-			//	{
-			//		throw new ArgumentOutOfRangeException();
-			//	}
-
-			//	Console.WriteLine($"年齢は{age}歳です");
-
-			//4.5.1
-			//try
-			//{
-			//	Console.WriteLine("分子を入力してください");
-			//	int a = int.Parse(Console.ReadLine());
-			//	Console.WriteLine("分母を入力してください");
-			//	int b = int.Parse(Console.ReadLine());
-			//	int c = a / b;
-			//	Console.WriteLine(c);
-			//}
-			//catch (FormatException)
-			//{
-			//	Console.WriteLine("数字を入力してください");
-			//}
-			//catch (DivideByZeroException)
-			//{
-			//	Console.WriteLine("0では割れません");
-			//}
-			////4.6.1
-			//			int total = 0;
-			//		for (int i = 1; i <= 10; i++)
-			//		{
-			//			total += i;
-			//		}
-			//		Console.WriteLine("合計は " + total);
-
-			//4.7.1
-
-			//try
-			//{
-			//	Console.Write("数値1を入力してください：");
-			//	int a = int.Parse(Console.ReadLine());
-
-			//	Console.Write("数値2を入力してください：");
-			//	int b = int.Parse(Console.ReadLine());
-
-			//	Console.Write("演算子（+, -, *, /）を入力してください：");
-			//	string op = Console.ReadLine();
-
-			//	switch (op)
-			//	{
-			//		case "+":
-			//			Console.WriteLine(a + b);
-			//			break;
-			//		case "-":
-			//			Console.WriteLine(a - b);
-			//			break;
-
-			//		case "*":
-			//			Console.WriteLine(a * b);
-			//			break;
-
-			//		case "/":
-			//			Console.WriteLine(a / b);
-			//			break;
-			//		default:
-			//			Console.WriteLine("演算子が正しくありません");
-			//			break;
+			//	else
+			//	{ 
+			//		return y;
 			//	}
 			//}
-			//catch (FormatException)
-			//{
-			//	Console.WriteLine("整数を入力してください");
-			//}
-			//catch (DivideByZeroException)
-			//{
-			//	Console.WriteLine("0では割れません");
-			//}
 
-			//using (StreamWriter sw = new StreamWriter("output.txt"))
+			//2.6.4
+			//static int m264(int[] nums)
 			//{
-			//	sw.WriteLine("名前：田中太郎");
-			//	sw.WriteLine("年齢：20歳");
-			//	sw.WriteLine("趣味：ゲーム");
-			//}
-
-			//Console.WriteLine("書き込みが完了しました");
-
-			//5.2.1
-			//string filePath = "output.txt";
-			//if (File.Exists(filePath))
-			//{
-			//	using (StreamReader sr = new StreamReader("output.txt"))
+			//	int max = nums[0];
+			//	for (int i = 1; i < nums.Length; i++)
 			//	{
-			//		int lineNumber = 1;
-
-			//		string line;
-
-			//		while ((line = sr.ReadLine()) != null)
-			//		{
-			//			Console.WriteLine($"{lineNumber}: {line}");
-			//			lineNumber++;
+			//		if (nums[i] > max)
+			//		{ 
+			//		max = nums[i];
 			//		}
 			//	}
+			//	return max;
 			//}
-			//catch (FileNotFoundException)
+			//static int GetMin(int[] nums)
 			//{
-			//	Console.WriteLine("ファイルが見つかりません");
-			//}
+			//	int min = nums[0];
 
-			//5.3.1
-			//string path = "apend.txt";
-			//string memo = "メモ内容";
-			//using (StreamWriter sw = new StreamWriter(path, append:true))
-			//{
-			//	sw.WriteLine("DataTime.Today:2026-07-30");
-			//}
-
-			//string path = "append.txt";
-			//using (StreamWriter sw = new StreamWriter(path, append:false))
-			//{
-			//	Console.WriteLine("初期化しました");
-			//}
-			//string text = File.ReadAllText(path);
-			//Console.WriteLine("ファイルの内容");
-			//Console.WriteLine(text);
-
-			//5.4.1
-			//Console.Write("読み込みたいファイル名を入力してください: ");
-			//string fileName = Console.ReadLine();
-			//if (!File.Exists(fileName))
-			//{
-			//	Console.WriteLine("存在しません");
-			//	return;
-			//}
-			//try
-			//{
-			//	string[] line = File.ReadAllLines(fileName);
-			//	Console.WriteLine("ファイルの内容");
-			//	for (int i = 0; i < line.Length; i++)
+			//	for (int i = 1; i < nums.Length; i++)
 			//	{
-			//		Console.WriteLine($"{i+1}:{line[i]}");
-			//	}
-			//}
-			//catch(Exception ex)
-			//{
-			//	Console.WriteLine("読み込み中にエラーが発生しました");
-			//	Console.WriteLine(ex.Message);
-			//}
-
-			//5.5.1
-			//string folder = "data/logs";
-			//Directory.CreateDirectory(folder);
-			//string path = Path.Combine(folder, "today.txt");
-			//File.WriteAllText(path,"今日のメモ");
-			//Console.WriteLine("ファイルを作成しました");
-
-			//5.5.2
-			//string folder = "data";
-			//string[] files = Directory.GetFiles(folder, "*.txt");
-			//foreach (string file in files)
-			//{
-			//	FileInfo info= new FileInfo(file);
-			//	Console.WriteLine($"ファイル名：{info.Name}");
-			//	Console.WriteLine($"サイズ：{info.Length}バイト");
-			//	Console.WriteLine($"最終更新：{ info.LastWriteTime}");
-			//	Console.WriteLine();
-			//}
-
-			//5.6.1
-			//	string[] lines =
-			//{
-			//	"1行目",
-			//	"2行目",
-			//	"3行目"
-			//};
-			//	File.WriteAllLines("quick.txt", lines);
-			//	string[] readLines = File.ReadAllLines("quick.txt");
-			//	foreach (string line in readLines)
-			//	{
-			//		Console.WriteLine(line);
-			//	}
-
-			//5.7.1
-			//string fileName = "user.csv";
-			//string users = Console.ReadLine();
-			//File.AppendAllText(fileName, users + Environment.NewLine, Encoding.GetEncoding("shift_jis"));
-			//using (StreamReader sw = new StreamReader(fileName, Encoding.GetEncoding("shift_jis")))
-			//{
-
-			//	string[] lines = File.ReadAllLines("user.csv");
-			//	foreach (string line in lines)
-			//	{
-			//		string[] data = line.Split(',');
-			//		if (data.Length != 2)
+			//		if (nums[i] < min)
 			//		{
-			//			Console.WriteLine("警告");
-			//			continue;
+			//			min = nums[i];
 			//		}
-			//		Console.WriteLine($"Name={data[0]}, Age={data[1]}");
 			//	}
+
+			//	return min;
 			//}
-
-			//5.7.2
-			//Console.WriteLine("名前を入力してください");
-			//string name = Console.ReadLine();
-
-			//int age;
-
-			//while (true)
+			//static double GetAverage(int[] nums)
 			//{
-			//	Console.WriteLine("年齢を入力してください");
-			//	if (int.TryParse(Console.ReadLine(), out age))
+			//	int sum = 0;
+
+			//	for (int i = 0; i < nums.Length; i++)
 			//	{
-			//		break;
+			//		sum += nums[i];
 			//	}
-			//	Console.WriteLine("年齢を整数で入力してください");
-			//}
-			//string line = $"{name},{age}";
-			//File.AppendAllText("user.csv", line + Environment.NewLine);
-			//Console.WriteLine("保存しました");
 
-			//5.8.1
-			//List<User> users = new List<User>();
-			//string[] lines = File.ReadAllLines("user.csv");
-			//foreach (string line in lines)
-			//{
-			//	string[] data = line.Split(',');
-			//	if (data.Length != 2)
-			//	{
-			//		Console.WriteLine("データ形式が正しくありません");
-			//		continue;
-			//	}
-			//	User user = new User
-			//	{
-			//		Name = data[0],
-			//		Age = int.Parse(data[1])
-			//	};
-			//	users.Add(user);
-			//}
-			//Console.WriteLine("--　全ユーザー　--");
-			//foreach (User user in users)
-			//{
-			//	Console.WriteLine(user);
-			//}
-			//users = users.OrderByDescending(u => u.Age).ToList();
-			//Console.WriteLine();
-			//Console.WriteLine("=== 年齢順（降順） ===");
-
-			//foreach (User user in users)
-			//{
-			//	Console.WriteLine(user);
+			//	return (double)sum / nums.Length;
 			//}
 
-			//	List<User> users = new List<User>
-			//{
-			//	new User("Taro", 20),
-			//	new User("Hanako", 25),
-			//	new User("Jiro", 8)
-			//};
 
-			//	PrintUsersTable(users);
-
-			//5.10.1
-			//string path = "utf8.txt";
-			//using (StreamWriter writer = new StreamWriter(path, append: false, Encoding.UTF8))
-			//{
-			//	writer.WriteLine("こんにちは、世界！");
-			//	writer.WriteLine("これはUTF-8のテストです。");
-			//}
-			//using (StreamReader reader = new StreamReader(path, Encoding.UTF8))
-			//{
-			//	string line;
-			//	while ((line = reader.ReadLine()) != null)
-			//	{
-			//		Console.WriteLine(line);
-			//	}
-			//}
-
-			//5.11.1
-			//try
-			//{
-			//	Log("起動しました");
-			//	Console.WriteLine("アプリが動いています");
-			//}
-			//catch (Exception ex)
-			//{
-			//	Log("ERROR:" + ex.Message);
-			//}
-			//finally
-			//{
-			//	Log("終了します");
-			//}
 
 		}
+
+
+
+
+		//7.6.1
+		//Employee empl = new FullTimeEmployee("田中",1000);
+		//empl.CalculateMonthlyPay();
+		//FullTimeEmployee fte1 = (FullTimeEmployee)emp;
+		//fte1.AddOvertimeHours(10);
+		//FullTimeEmployee? fte2 = emp as FullTimeEmployee;
+		//if (fte2 != null)
+		//{ 
+		//fte2.AddOvertimeHours(10);
+		//}
+		////失敗時（FullTimeEmployee出ない場合）、asはnullを返す
+		//if (emp is FullTimeEmployee fte3)
+		//{
+		//	fte3.AddOvertimeHours(10);
+		//}
+		////失敗時（FullTimeEmployeeでない場合）ifの中は実行されない
+
+
+		//    int x = 11;
+		//     Console.WriteLine($"x= {x}");
+
+		//       x = 13 + 17;
+		//     Console.WriteLine("x=" + x);
+
+
+		//       x = 13;
+		//     int y = 17;
+		//       Console.WriteLine("x=" + y);
+
+		//        x = 13 * 17;
+		// Console.WriteLine("x=" + x);
+
+		//         m211();
+		//m212();
+		//m213();
+		//m214();
+
+		//m221();
+		//m222();
+		//         Console.WriteLine("m,nを入力してください");
+		//         int m = int.Parse(Console.ReadLine());
+		//int n = int.Parse(Console.ReadLine());
+		//m223(m,n);
+		//         Console.WriteLine("bを入力してください");
+		//       //  int b = int.Parse(Console.ReadLine());
+		////m224(b);
+		//         Console.WriteLine("pを入力してください");
+		//         int p = int.Parse(Console.ReadLine());
+		//         power(p);
+
+		//         int q = int.Parse(Console.ReadLine());
+		//         aaa(q);
+
+		//         Console.WriteLine("ｃを入力してください");
+		//         int c = int.Parse(Console.ReadLine());
+		//         Console.WriteLine(CircleArea(c));
+
+		//         Console.WriteLine("tを入力してください");
+		//         int t = int.Parse(Console.ReadLine());
+		//         ggg(t);
+
+		//         Console.WriteLine("a,bを入力してください");
+		//         int a = int.Parse(Console.ReadLine());
+		//   //      int b = int.Parse(Console.ReadLine());
+		// //        Add(a,b);
+
+		//         Console.WriteLine("numberを入力してください");
+		//         int x = int.Parse(Console.ReadLine());
+		//         bool b = IsEven(x);
+		//         if (b) {
+		//             Console.WriteLine("偶数");
+		//         }else{
+		//             Console.WriteLine("奇数");
+		//         }
+
+		//Console.WriteLine("priceを入力してください");
+		//int price = int.Parse(Console.ReadLine());
+		//Console.WriteLine(CalcTax(price));
+
+		//Console.WriteLine("a,b,cを入力してください");
+		//int a = int.Parse(Console.ReadLine());
+		//int b = int.Parse(Console.ReadLine());
+		//int c = int.Parse(Console.ReadLine());
+		//Console.WriteLine(GetMax(a,b,c));
+
+		//Console.WriteLine("x,yを入力してください");
+		//int x = int.Parse(Console.ReadLine());
+		//int y = int.Parse(Console.ReadLine());
+		//compare(x,y);
+
+		//Console.WriteLine("x,yを入力してください");
+		//int x = int.Parse(Console.ReadLine());
+		//int y = int.Parse(Console.ReadLine());
+		//         number(x,y);
+
+		//         Console.WriteLine("numを入力してください");
+		//         int num = int.Parse(Console.ReadLine());
+		//         even(num);
+
+		//Console.WriteLine("点数を入力してください");
+		//int score = int.Parse(Console.ReadLine());
+		//judge(score);
+
+		//Console.WriteLine("SPAM!!");
+		//Spam();
+
+		//Console.WriteLine("xを入力してください");
+		//int x = int.Parse(Console.ReadLine());
+		//kuku(x);
+
+
+		//int sum = 0;
+		////for (int i = 0; i < 10; i++)
+		//{
+		//    Console.WriteLine("整数を入力してください");
+		//    int a = int.Parse(Console.ReadLine());
+		//    sum += a;
+		//}
+		//int av = avg(sum);
+		//Console.WriteLine("整数を入力してください");
+
+
+		//Console.WriteLine(" 試合開始");
+		//int g = 0;
+		//int t = 0;
+		//bb(g,t);
+
+
+
+
+		//sb();
+
+		//    Number();
+
+		//num();
+
+		// Kuku();
+
+		// sm();
+
+		//int t = int.Parse(Console.ReadLine());
+		//Method(t);
+
+		//	Console.WriteLine("数値を入力してください");
+		//	int num = int.Parse(Console.ReadLine());
+		//	int result = Method(num);
+
+		//	Console.WriteLine(result);
+
+		//Console.WriteLine("二つの整数を入力してください");
+		//int t = int.Parse(Console.ReadLine());
+		//int s = int.Parse(Console.ReadLine());
+
+		//int result = avge(t, s);
+		//Console.WriteLine(result);
+
+		//Console.WriteLine("三つの整数を入力してください");
+		//int x = int.Parse(Console.ReadLine());
+		//         int y = int.Parse(Console.ReadLine());
+		//int z = int.Parse(Console.ReadLine());
+		//int re = com(x,y,z);
+		//         Console.WriteLine(re);
+
+		//Console.WriteLine("数値を入力してください");
+		//int result = San();
+		//Console.WriteLine("入力された最大値は" + result +"です");
+
+		//Console.WriteLine("数値を入力してください");
+		//int re = Min();
+		//Console.WriteLine("入力された最小値は" + re + "です");
+
+
+		//Console.WriteLine("数値を入力してください");
+		//int re = av();
+		//Console.WriteLine("入力された平均値は" + re + "です");
+
+
+		//2.7.5.	問題7-5
+		//2.7.6.	問題7-6
+
+		//	CoinCase coinCase = new CoinCase();
+
+		//	for (int i = 0; i < 10; i++)
+		//	{
+		//		Console.Write("硬貨の種類を入力してください（500,100,50,10,5,1）：");
+		//		int type = int.Parse(Console.ReadLine());
+
+		//		Console.Write("枚数を入力してください：");
+		//		int count = int.Parse(Console.ReadLine());
+
+		//		coinCase.AddCoins(type, count);
+		//	}
+		//	Console.WriteLine($"500円：{coinCase.GetCount(500)}枚");
+		//	Console.WriteLine($"100円：{coinCase.GetCount(100)}枚");
+		//	Console.WriteLine($"50円：{coinCase.GetCount(50)}枚");
+		//	Console.WriteLine($"10円：{coinCase.GetCount(10)}枚");
+		//	Console.WriteLine($"5円：{coinCase.GetCount(5)}枚");
+		//	Console.WriteLine($"1円：{coinCase.GetCount(1)}枚");
+
+		//	Console.WriteLine($"合計金額：{coinCase.GetAmount()}円");
+		//	Console.WriteLine($"総額：{coinCase.GetAmount()}円");
+
+		//2.7.7
+
+		//Cat cat = new Cat();
+		//cat.Name = "タマ";
+		//cat.Age = 10;
+		//cat.ShowProfile();
+		//cat.Sleep();
+
+		//2.7.8
+		//Cat cat = new Cat("クロ", 2);
+		//cat.ShowProfile();
+		//cat.Sleep();
+
+		//Cat cat = new Cat("クロ", 2);
+		//Console.WriteLine(cat.Name);
+		//cat.ShowProfile();
+		//cat.Sleep();
+
+		//2.7.9
+
+		//Dog dog = new Dog("コロ", 7);
+		//Console.WriteLine(dog.Name);
+		//dog.ShowProfile();
+		//dog.Run();
+
+		//2.7.10
+		//Dog dog = new Dog("ジョージ", 4);
+		//dog.ShowProfile();
+		//dog.Speak();
+
+		//Cat cat = new Cat("マロ", 7);
+		//cat.ShowProfile();
+		//cat.Speak();
+
+
+		//2.7.11
+		//Animal[] animals = new Animal[4];
+		//animals[0] = new Cat("ミケ", 2);
+		//animals[1] = new Dog("ポチ", 5);
+		//animals[2] = new Cat("タマ", 1);
+		//animals[3] = new Dog("コロ", 4);
+
+
+		//	foreach (Animal a in animals)
+		//	{
+		//		a.ShowProfile();
+		//		a.Speak();
+		//	}
+
+		//2.8.2
+		//Animal dog = new Dog("ポチ", 3); 
+		//Animal cat = new Cat("タマ", 5); 
+		//Console.WriteLine(dog);
+		//Console.WriteLine(cat);
+
+		////2.8.3
+		//List<Animal> animal = new List<Animal>();
+		//animal.Add(new Dog("ポチ",3));
+		//animal.Add(new Cat("タマ",5));
+		//animal.Add(new Dog("ジョン",7));
+		//animal.Add(new Cat("ねこ", 5));
+
+		//foreach (Animal a in animal)
+		//{
+		//	a.Speak();
+		//	Console.WriteLine(a);
+		//}
+
+		//2.8.4
+		//List<Animal> animal = new List<Animal>
+		//{	
+		//	new Dog("ポチ", 3),
+		//	new Cat("タマ", 5),
+		//	new Dog("ジョン", 7),
+		//	new Cat("ねこ", 5),
+		//	new Bird("ぴよ",8),
+		//	new Bird ("ぽこ",11),
+		//};
+
+		//foreach (Animal a in animal)
+		//{
+		//	Console.WriteLine(a);
+		//	a.Speak();
+		//if (a is Bird b)
+		//{
+		//	b.Fly();
+		//}
+		//}
+
+		//2.8.5
+		//Animal dog = new Dog("ポン", 4);
+		//dog.Walk();
+		//dog.Walk(4);
+
+		//2.8.6
+		//List<Animal> animal = new List<Animal>
+		//{
+		//		new Dog("ポチ", 3),
+		//		new Cat("タマ", 5),
+		//		new Dog("ジョン", 7),
+		//		new Cat("ねこ", 5),
+		//		new Bird("ぴよ",8),
+		//		new Bird ("ぽこ",11),
+		//};
+		//foreach (Animal a in animal)
+		//{
+		//	Console.WriteLine($"{a.Species}{a.Name}{a.Age}");
+		//}
+
+
+
+
+		//Animal animal = new Cat("ミー", 9);
+		//animal.ShowKind();
+		//Cat cat = new Cat("ポン",5);
+		//cat.ShowKind();
+
+		////2.8.8
+		//Animal a = new Dog("ジョン",4);
+		//   ((Dog)a).Run();
+		////失敗すると例外が出る
+
+
+		//Dog dog = a as Dog;
+		//if (dog != null)
+		//{
+		//	dog.Run();
+		//}
+		////安全（null）の場合実行されない
+
+		//if (a is Dog d) d.Run();
+		////現代的で安全
+		///
+
+		//2.8.9
+
+		//List<Animal> animal = new List<Animal>
+		//{
+		//		new Dog("ポチ", 3),
+		//		new Cat("タマ", 5),
+		//		new Dog("ジョン", 7),
+		//		new Cat("ねこ", 5),
+		//		new Bird("ぴよ",8),
+		//		new Bird ("ぽこ",11),
+		//};
+		//foreach (Animal a in animal)
+		//{
+		//	a.DoDaily();
+		//}
+
+		//2.8.10
+
+
+		//Dog.Play();
+
+		//List<IPlayable> animal = new List<IPlayable>
+		//{
+		//		new Dog("ポチ", 3),
+		//		new Cat("タマ", 5),
+		//		new Dog("ジョン", 7),
+		//		new Cat("ねこ", 5),
+		//		new Bird("ぴよ", 8),
+		//		new Bird("ぽこ", 11)
+		//};
+		//foreach (IPlayable a in animal)
+		//{
+		//	a.Play();
+		//}
+
+		//List<Animal> ani = new List<Animal>
+		//{
+		//		new Dog("ポチ", 3),
+		//		new Cat("タマ", 5),
+		//		new Dog("ジョン", 7),
+		//		new Cat("ねこ", 5),
+		//		new Bird("ぴよ",8),
+		//		new Bird ("ぽこ",11),
+		//};
+		//foreach (Animal a in ani)
+		//{
+		//	a.Speak();
+		//}
+
+		//2.8.11
+
+		//List<Animal> animal = new List<Animal>();
+
+		//Console.WriteLine("何匹分入力しますか？");
+		//int n = int.Parse(Console.ReadLine());
+
+		//for (int i = 0; i < n; i++)
+		//{ 
+		//	Console.WriteLine("種類、名称、年齢を一行で入力してください");
+		//	string[] data = Console.ReadLine().Split(' ');
+
+		//	string s = data[0];
+		//	string name = data[1];
+		//	int age = int.Parse(data[2]);
+
+		//	if (s == "Dog")
+		//	{
+		//		animal.Add(new Dog(name, age));
+		//	}
+		//	else if (s == "Cat")
+		//	{
+		//		animal.Add(new Cat(name, age));
+		//	}
+		//	else if (s == "Bird")
+		//	{
+		//		animal.Add(new Bird(name, age));
+		//	}
+
+		//}
+		//	foreach (Animal a in animal)
+		//	{
+		//		a.Speak();
+		//	}
+
+		//	foreach (Animal a in animal)
+		//	{
+		//		a.ShowProfile();
+		//	}
+
+		//	foreach (Animal a in animal)
+		//	{
+		//	if (a is IPlayable p)
+		//	{
+		//		p.Play();
+		//	}
+		//	}
+
+		//	Dictionary<string, int > count = new Dictionary<string, int>();
+
+		//	foreach (Animal a in animal)
+		//	{
+		//		string type = a.GetType().Name;
+		//		if(count.ContainsKey(type))
+		//			count[type]++;
+		//		else count[type] = 1;
+		//	}
+		//	foreach (var item in count)
+		//	{
+		//		Console.WriteLine($"{item.Key} : {item.Value}");
+		//	}
+
+		//3.1.1
+		//Student s = new Student();
+		//s.Name = "田中";
+		//s.Age = 20;
+		//s.ShowProfile();
+
+		//3.2.1
+		//Season season;
+		//season = Season.Summer;
+		//Console.WriteLine(season);
+		//3.2.1
+		//3.2.2
+		//Console.WriteLine("0～3の数字を入力してください");
+		//	int num = int.Parse(Console.ReadLine());
+		//Season season = (Season)num;
+		//Console.WriteLine(season);
+
+		//3.3.1
+		//Point p = new Point(5, 10);
+		//p.ShowPoint();
+
+		//3.4.1
+		//Counter c1 = new Counter();
+		//Counter c2 = new Counter();
+		//Counter c3 = new Counter();
+
+		//Console.WriteLine(Counter.GetCount());
+		///3.5.1
+		//List<int> numbers = new List<int>();
+
+		//for (int i = 0; i < 5; i++)
+		//{
+		//	Console.Write("整数を入力してください：");
+		//	int num = int.Parse(Console.ReadLine());
+
+		//	numbers.Add(num);
+		//}
+
+		//foreach (int n in numbers)
+		//{
+		//	Console.WriteLine(n);
+		//}
+		//3.5.2
+		//List<string> name = new List<string>();
+		//for (int i = 0; i < 3; i++)
+		//{
+		//	Console.WriteLine("名前を入力してください");
+		//	string n = Console.ReadLine();
+
+		//	name.Add(n);
+		//}
+		//foreach (string n in name)
+		//{
+		//	Console.WriteLine(n);
+		//}
+
+		//3.6.1
+		//Dictionary<string, int> p = new Dictionary<string, int>();
+		//p.Add("wonbin",24);
+		//p.Add("eun", 25);
+		//p.Add("sun",24);
+		//foreach (var key in p)
+		//{
+		//	Console.WriteLine($"{key.Key}:{key.Value}");
+		//}
+
+		//3.7.1
+		//School.Teacher teacher = new School.Teacher();
+		//School.Student student = new School.Student();
+
+		//teacher.Name = "山田先生";
+		//student.Name = "田中さん";
+
+		//teacher.ShowProfile();
+		//student.ShowProfile();
+
+		//4.1.1
+		//try
+		//{
+		//	Console.WriteLine("入力してください");
+		//	int n = int.Parse(Console.ReadLine());
+		//	Console.WriteLine($"入力された整数:{n}");
+		//}
+		//catch (FormatException)
+		//{
+		//	Console.WriteLine("整数を入力してください");
+		//}
+
+		//4.2.1
+		//try
+		//{
+		//	StreamReader sr = new StreamReader("test.txt");
+
+		//	Console.WriteLine("ファイルを開きました");
+
+		//	sr.Close();
+		//}
+		//catch (FileNotFoundException)
+		//{
+		//	Console.WriteLine("ファイルが存在しません");
+		//}
+		//finally
+		//{
+		//	Console.WriteLine("処理を終了します");
+		//}
+
+		//4.3.1
+		//try
+		//{
+		//	int a = 10;
+		//	int b = 0;
+		//	int c = a / b;
+		//}
+		//catch (DivideByZeroException)
+		//{
+		//	Console.WriteLine("0では割れません");
+		//}
+		//try
+		//{
+		//	int[] a = { 1, 2, 3 };
+		//	Console.WriteLine(a[5]);
+		//}
+		//catch(IndexOutOfRangeException)
+		//{
+		//	Console.WriteLine("範囲外のアクセスです");
+		//}
+
+		//4.4.1
+		//	try
+		//	{
+		//		Console.Write("年齢を入力してください：");
+		//		int age = int.Parse(Console.ReadLine());
+
+		//		CheckAge(age);
+		//	}
+		//	catch (ArgumentOutOfRangeException)
+		//	{
+		//		Console.WriteLine("入力が不正です");
+		//	}
+
+		//}
+
+		//4.5.1
+
+
+
+		//4.4.1
+		//static void CheckAge(int age)
+		//{
+		//	if (age < 0 || age > 120)
+		//	{
+		//		throw new ArgumentOutOfRangeException();
+		//	}
+
+		//	Console.WriteLine($"年齢は{age}歳です");
+
+		//4.5.1
+		//try
+		//{
+		//	Console.WriteLine("分子を入力してください");
+		//	int a = int.Parse(Console.ReadLine());
+		//	Console.WriteLine("分母を入力してください");
+		//	int b = int.Parse(Console.ReadLine());
+		//	int c = a / b;
+		//	Console.WriteLine(c);
+		//}
+		//catch (FormatException)
+		//{
+		//	Console.WriteLine("数字を入力してください");
+		//}
+		//catch (DivideByZeroException)
+		//{
+		//	Console.WriteLine("0では割れません");
+		//}
+		////4.6.1
+		//			int total = 0;
+		//		for (int i = 1; i <= 10; i++)
+		//		{
+		//			total += i;
+		//		}
+		//		Console.WriteLine("合計は " + total);
+
+		//4.7.1
+
+		//try
+		//{
+		//	Console.Write("数値1を入力してください：");
+		//	int a = int.Parse(Console.ReadLine());
+
+		//	Console.Write("数値2を入力してください：");
+		//	int b = int.Parse(Console.ReadLine());
+
+		//	Console.Write("演算子（+, -, *, /）を入力してください：");
+		//	string op = Console.ReadLine();
+
+		//	switch (op)
+		//	{
+		//		case "+":
+		//			Console.WriteLine(a + b);
+		//			break;
+		//		case "-":
+		//			Console.WriteLine(a - b);
+		//			break;
+
+		//		case "*":
+		//			Console.WriteLine(a * b);
+		//			break;
+
+		//		case "/":
+		//			Console.WriteLine(a / b);
+		//			break;
+		//		default:
+		//			Console.WriteLine("演算子が正しくありません");
+		//			break;
+		//	}
+		//}
+		//catch (FormatException)
+		//{
+		//	Console.WriteLine("整数を入力してください");
+		//}
+		//catch (DivideByZeroException)
+		//{
+		//	Console.WriteLine("0では割れません");
+		//}
+
+		//using (StreamWriter sw = new StreamWriter("output.txt"))
+		//{
+		//	sw.WriteLine("名前：田中太郎");
+		//	sw.WriteLine("年齢：20歳");
+		//	sw.WriteLine("趣味：ゲーム");
+		//}
+
+		//Console.WriteLine("書き込みが完了しました");
+
+		//5.2.1
+		//string filePath = "output.txt";
+		//if (File.Exists(filePath))
+		//{
+		//	using (StreamReader sr = new StreamReader("output.txt"))
+		//	{
+		//		int lineNumber = 1;
+
+		//		string line;
+
+		//		while ((line = sr.ReadLine()) != null)
+		//		{
+		//			Console.WriteLine($"{lineNumber}: {line}");
+		//			lineNumber++;
+		//		}
+		//	}
+		//}
+		//catch (FileNotFoundException)
+		//{
+		//	Console.WriteLine("ファイルが見つかりません");
+		//}
+
+		//5.3.1
+		//string path = "apend.txt";
+		//string memo = "メモ内容";
+		//using (StreamWriter sw = new StreamWriter(path, append:true))
+		//{
+		//	sw.WriteLine("DataTime.Today:2026-07-30");
+		//}
+
+		//string path = "append.txt";
+		//using (StreamWriter sw = new StreamWriter(path, append:false))
+		//{
+		//	Console.WriteLine("初期化しました");
+		//}
+		//string text = File.ReadAllText(path);
+		//Console.WriteLine("ファイルの内容");
+		//Console.WriteLine(text);
+
+		//5.4.1
+		//Console.Write("読み込みたいファイル名を入力してください: ");
+		//string fileName = Console.ReadLine();
+		//if (!File.Exists(fileName))
+		//{
+		//	Console.WriteLine("存在しません");
+		//	return;
+		//}
+		//try
+		//{
+		//	string[] line = File.ReadAllLines(fileName);
+		//	Console.WriteLine("ファイルの内容");
+		//	for (int i = 0; i < line.Length; i++)
+		//	{
+		//		Console.WriteLine($"{i+1}:{line[i]}");
+		//	}
+		//}
+		//catch(Exception ex)
+		//{
+		//	Console.WriteLine("読み込み中にエラーが発生しました");
+		//	Console.WriteLine(ex.Message);
+		//}
+
+		//5.5.1
+		//string folder = "data/logs";
+		//Directory.CreateDirectory(folder);
+		//string path = Path.Combine(folder, "today.txt");
+		//File.WriteAllText(path,"今日のメモ");
+		//Console.WriteLine("ファイルを作成しました");
+
+		//5.5.2
+		//string folder = "data";
+		//string[] files = Directory.GetFiles(folder, "*.txt");
+		//foreach (string file in files)
+		//{
+		//	FileInfo info= new FileInfo(file);
+		//	Console.WriteLine($"ファイル名：{info.Name}");
+		//	Console.WriteLine($"サイズ：{info.Length}バイト");
+		//	Console.WriteLine($"最終更新：{ info.LastWriteTime}");
+		//	Console.WriteLine();
+		//}
+
+		//5.6.1
+		//	string[] lines =
+		//{
+		//	"1行目",
+		//	"2行目",
+		//	"3行目"
+		//};
+		//	File.WriteAllLines("quick.txt", lines);
+		//	string[] readLines = File.ReadAllLines("quick.txt");
+		//	foreach (string line in readLines)
+		//	{
+		//		Console.WriteLine(line);
+		//	}
+
+		//5.7.1
+		//string fileName = "user.csv";
+		//string users = Console.ReadLine();
+		//File.AppendAllText(fileName, users + Environment.NewLine, Encoding.GetEncoding("shift_jis"));
+		//using (StreamReader sw = new StreamReader(fileName, Encoding.GetEncoding("shift_jis")))
+		//{
+
+		//	string[] lines = File.ReadAllLines("user.csv");
+		//	foreach (string line in lines)
+		//	{
+		//		string[] data = line.Split(',');
+		//		if (data.Length != 2)
+		//		{
+		//			Console.WriteLine("警告");
+		//			continue;
+		//		}
+		//		Console.WriteLine($"Name={data[0]}, Age={data[1]}");
+		//	}
+		//}
+
+		//5.7.2
+		//Console.WriteLine("名前を入力してください");
+		//string name = Console.ReadLine();
+
+		//int age;
+
+		//while (true)
+		//{
+		//	Console.WriteLine("年齢を入力してください");
+		//	if (int.TryParse(Console.ReadLine(), out age))
+		//	{
+		//		break;
+		//	}
+		//	Console.WriteLine("年齢を整数で入力してください");
+		//}
+		//string line = $"{name},{age}";
+		//File.AppendAllText("user.csv", line + Environment.NewLine);
+		//Console.WriteLine("保存しました");
+
+		//5.8.1
+		//List<User> users = new List<User>();
+		//string[] lines = File.ReadAllLines("user.csv");
+		//foreach (string line in lines)
+		//{
+		//	string[] data = line.Split(',');
+		//	if (data.Length != 2)
+		//	{
+		//		Console.WriteLine("データ形式が正しくありません");
+		//		continue;
+		//	}
+		//	User user = new User
+		//	{
+		//		Name = data[0],
+		//		Age = int.Parse(data[1])
+		//	};
+		//	users.Add(user);
+		//}
+		//Console.WriteLine("--　全ユーザー　--");
+		//foreach (User user in users)
+		//{
+		//	Console.WriteLine(user);
+		//}
+		//users = users.OrderByDescending(u => u.Age).ToList();
+		//Console.WriteLine();
+		//Console.WriteLine("=== 年齢順（降順） ===");
+
+		//foreach (User user in users)
+		//{
+		//	Console.WriteLine(user);
+		//}
+
+		//	List<User> users = new List<User>
+		//{
+		//	new User("Taro", 20),
+		//	new User("Hanako", 25),
+		//	new User("Jiro", 8)
+		//};
+
+		//	PrintUsersTable(users);
+
+		//5.10.1
+		//string path = "utf8.txt";
+		//using (StreamWriter writer = new StreamWriter(path, append: false, Encoding.UTF8))
+		//{
+		//	writer.WriteLine("こんにちは、世界！");
+		//	writer.WriteLine("これはUTF-8のテストです。");
+		//}
+		//using (StreamReader reader = new StreamReader(path, Encoding.UTF8))
+		//{
+		//	string line;
+		//	while ((line = reader.ReadLine()) != null)
+		//	{
+		//		Console.WriteLine(line);
+		//	}
+		//}
+
+		//5.11.1
+		//try
+		//{
+		//	Log("起動しました");
+		//	Console.WriteLine("アプリが動いています");
+		//}
+		//catch (Exception ex)
+		//{
+		//	Log("ERROR:" + ex.Message);
+		//}
+		//finally
+		//{
+		//	Log("終了します");
+		//}
+
+	}
 		//5.11.1
 		//static void Log(string message)
 		//{
