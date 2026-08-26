@@ -1496,6 +1496,232 @@ namespace _20260721_Practice
 				//dog3.ShowProfile();
 
 				//2.7.5
+				//2.7.6
+				//CoinCase coinCase = new CoinCase();
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	Console.WriteLine("硬貨の種類を入力してください");
+				//	int t = int.Parse(Console.ReadLine());
+				//	Console.WriteLine("硬貨の枚数を入力してください");
+				//	int c = int.Parse(Console.ReadLine());
+				//	coinCase.AddCoins(t,c);
+
+				//}
+				//Console.WriteLine($"500円{coinCase.GetCount(500)}枚{coinCase.GetAmount(500)}円");
+				//Console.WriteLine($"100円{coinCase.GetCount(100)}枚{coinCase.GetAmount(100)}");
+				//Console.WriteLine($"50円{coinCase.GetCount(50)}枚{coinCase.GetAmount(50)}");
+				//Console.WriteLine($"10円{coinCase.GetCount(10)}枚{coinCase.GetAmount(10)}");
+				//Console.WriteLine($"5円{coinCase.GetCount(5)}枚{coinCase.GetAmount(5)}");
+				//Console.WriteLine($"1円{coinCase.GetCount(1)}枚{coinCase.GetAmount(1)}");
+
+				//Console.WriteLine($"総額{coinCase.GetAmount()}円");
+				//Console.WriteLine($"総枚数{coinCase.GetAmount()}円");
+
+				//2.7.7
+				//2.7.8
+				//Cat cat = new Cat("タマ",5);
+				//cat.ShowProfile();
+				//cat.Sleep();
+
+				//2.7.9
+				//2.7.10
+				//Cat cat = new Cat("タマ", 5);
+				//Dog2 dog = new Dog2("ポチ", 6);
+				//cat.ShowProfile();
+				//dog.ShowProfile();
+				//cat.Sleep();
+				//cat.Speak();
+				//dog.Run();
+				//dog.Speak();
+
+				//2.7.11
+				//Animal[] animal = new Animal[4];
+				//animal[0] = new Cat("まろ", 7);
+				//animal[1] = new Dog2("jhon", 10);
+				//animal[2] = new Cat("ミケ", 9);
+				//animal[3] = new Dog2("tom", 1);
+				//for (int i = 0; i < animal.Length; i++)
+				//{
+				//	animal[i].ShowProfile();
+				//	animal[i].Speak();
+				//}
+
+				//2.8.1 am
+				//Cat cat = new Cat("タマ", 5);
+				//Dog2 dog = new Dog2("ポチ", 6);
+				//cat.ShowProfile();
+				//dog.ShowProfile();
+
+				//2.8.2
+				//Animal obj1 = new Dog2("ポチ",10);
+				//Animal obj2 = new Cat("タマ",6);
+
+				//Console.WriteLine(obj1);
+				//Console.WriteLine(obj2);
+
+				//2.8.3
+				//List<Animal> animals = new List<Animal>();
+				//animals.Add(new Cat("タマ", 4));
+				//animals.Add(new Dog2("タロ", 7));
+				//animals.Add(new Cat("コロ", 5));
+				//animals.Add(new Dog2("ジョン", 15));
+				//foreach (Animal animal in animals)
+				//{
+				//	animal.Speak();
+				//}
+
+				//2.8.4
+				//List<Animal> animals = new List<Animal>();
+				//animals.Add(new Cat("koro",6));
+				//animals.Add(new Bird("pi-",9));
+				//animals.Add(new Dog2("ジョン", 15));
+				//foreach (Animal animal in animals)
+				//{ 
+				//	//animal.Speak();
+				//	if (animal is Bird b) { b.Fly(); }
+				//}
+
+				//2.8.5
+				//Animal animal = new Dog2("ポチ", 5);
+				//animal.Walk();
+				//animal.Walk(3);
+
+				//2.8.6
+				//List<Animal> animals = new List<Animal>();
+
+				//animals.Add(new Dog2("ポチ", 5));
+				//animals.Add(new Cat("タマ", 3));
+				//animals.Add(new Bird("ピーちゃん", 2));
+				//foreach (Animal animal in animals)
+				//{
+				//	Console.WriteLine(
+				//		"Species: " + animal.Species +
+				//		", Name: " + animal.Name +
+				//		", Age: " + animal.Age
+				//	);
+				//}
+
+				//2.8.7
+				//Cat cat = new Cat("タマ",8);
+				//cat.ShowKind();
+
+				//Animal animal = cat;
+				//animal.ShowKind();
+
+				//2.8.8
+				//Animal a = new Dog2("non",5);
+				//((Dog2)a).Run();
+				//Dog2 dog = a as Dog2;
+				////失敗時例外が発生する
+
+				//if (dog != null)
+				//{
+				//	dog.Run();
+				//}
+				////nullになる
+
+				//if (a is Dog2 d)
+				//{
+				//	d.Run();
+				//}
+				////if野中が実行されない
+
+				//2.8.9
+				//List<Animal> animals = new List<Animal>();
+				//animals.Add(new Cat("pp",9));
+				//animals.Add(new Dog2("kk",7));
+				//animals.Add(new Bird("ss",1));
+				//foreach (Animal animal in animals)
+				//{
+				//	animal.DoDaily();
+				//}
+
+				//2.8.10
+				//Cat cat = new Cat("pp", 9);
+				//Dog2 dog = new Dog2("kk", 7);
+				//Bird bird = new Bird("ss", 1);
+
+				//// IPlayableとして見る
+				//List<IPlayable> playables = new List<IPlayable>();
+				//playables.Add(cat);
+				//playables.Add(dog);
+				//playables.Add(bird);
+
+				//foreach (IPlayable p in playables)
+				//{
+				//	p.Play();
+				//}
+
+				//// Animalとして見る
+				//List<Animal> animals = new List<Animal>();
+				//animals.Add(cat);
+				//animals.Add(dog);
+				//animals.Add(bird);
+
+				//foreach (Animal a in animals)
+				//{
+				//	a.Speak();
+				//}
+
+				////2.8.11
+				//List<Animal> animals = new List<Animal>();
+
+				//Console.Write("何匹登録しますか：");
+				//int n = int.Parse(Console.ReadLine());
+				//for (int i = 0; i < n; i++)
+				//{
+				//	string[] input = Console.ReadLine().Split(' ');
+
+				//	string species = input[0];
+				//	string name = input[1];
+				//	int age = int.Parse(input[2]);
+
+				//	if (species == "Dog")
+				//	{
+				//		animals.Add(new Dog2(name, age));
+				//	}
+				//	else if (species == "Cat")
+				//	{
+				//		animals.Add(new Cat(name, age));
+				//	}
+				//	else if (species == "Bird")
+				//	{
+				//		animals.Add(new Bird(name, age));
+				//	}
+				//}
+				//foreach (Animal animal in animals)
+				//{
+				//	animal.ShowProfile();
+				//	animal.Speak();
+				//}
+				//foreach (Animal animal in animals)
+				//{
+				//	if (animal is IPlayable playable)
+				//	{
+				//		playable.Play();
+				//	}
+				//}
+
+				//Dictionary<string, int> counts = new Dictionary<string, int>();
+				//foreach (Animal animal in animals)
+				//{
+				//	if (counts.ContainsKey(animal.Species))
+				//	{
+				//		counts[animal.Species]++;
+
+				//	}
+				//	else
+				//	{ 
+				//	counts.Add(animal.Species, 1);
+				//	}
+				//}
+				//Console.WriteLine("種類別頭数");
+				//foreach (KeyValuePair<string, int> pair in counts)
+				//{
+				//	Console.WriteLine($"{pair.Key}:{pair.Value}匹");
+				//}
+
+
 
 
 
