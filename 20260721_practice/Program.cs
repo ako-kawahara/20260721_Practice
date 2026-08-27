@@ -1721,6 +1721,367 @@ namespace _20260721_Practice
 				//	Console.WriteLine($"{pair.Key}:{pair.Value}匹");
 				//}
 
+				////2.8.11
+				//List<Animal> animals = new List<Animal>();
+
+				//Console.Write("何匹登録しますか：");
+				//int n = int.Parse(Console.ReadLine());
+				//for (int i = 0; i < n; i++)
+				//{
+				//	string[] input = Console.ReadLine().Split(' ');
+
+				//	string species = input[0];
+				//	string name = input[1];
+				//	int age = int.Parse(input[2]);
+
+				//	if (species == "Dog")
+				//	{
+				//		animals.Add(new Dog2(name, age));
+				//	}
+				//	else if (species == "Cat")
+				//	{
+				//		animals.Add(new Cat(name, age));
+				//	}
+				//	else if (species == "Bird")
+				//	{
+				//		animals.Add(new Bird(name, age));
+				//	}
+				//}
+				//foreach (Animal animal in animals)
+				//{
+				//	animal.ShowProfile();
+				//	animal.Speak();
+				//}
+				//foreach (Animal animal in animals)
+				//{
+				//	if (animal is IPlayable playable)
+				//	{
+				//		playable.Play();
+				//	}
+				//}
+
+				//3.1.1
+				//Student student = new Student("田中",25);
+				//student.ShowProfile();
+
+
+
+
+				//Dictionary<string, int> counts = new Dictionary<string, int>();
+				//foreach (Animal animal in animals)
+				//{
+				//	if (counts.ContainsKey(animal.Species))
+				//	{
+				//		counts[animal.Species]++;
+
+				//	}
+				//	else
+				//	{ 
+				//	counts.Add(animal.Species, 1);
+				//	}
+				//}
+				//Console.WriteLine("種類別頭数");
+				//foreach (KeyValuePair<string, int> pair in counts)
+				//{
+				//	Console.WriteLine($"{pair.Key}:{pair.Value}匹");
+				//}
+
+				//3.2.1
+				//Season season = Season.Summer;
+				//Console.WriteLine(season);
+
+				//3.2.2
+				//Console.WriteLine("0-3の整数を入力してください");
+				//int num = int.Parse(Console.ReadLine());
+				//Season season = (Season)num;
+
+				//Console.WriteLine(season);
+
+				//3.3.1
+				//Point point = new Point(5,10);
+				//point.ShowPoint();
+
+				//3.4.1
+				//Counter counter1 = new Counter();
+				//Counter counter2 = new Counter();
+				//Counter counter3 = new Counter();
+				//Console.WriteLine(Counter.GetCount());
+
+				//3.5.1
+				//Console.WriteLine("5つの整数を入力してください");
+				//List<int> lists = new List<int>();
+				//for (int i = 0; i < 5; i++)
+				//{
+				//	int num = int.Parse(Console.ReadLine());
+				//	lists.Add(num);
+				//}
+				//foreach (int list in lists)
+				//{
+				//	Console.WriteLine(list);
+				//}
+
+				//3.5.2
+				//List<string> lists = new List<string>();
+				//Console.WriteLine("３つの名前を入力してください");
+				//for (int i = 0; i < 3; i++)
+				//{ 
+				//	string name = Console.ReadLine();
+				//	lists.Add(name);
+				//}
+				//foreach (string list in lists)
+				//{ 
+				//	Console.WriteLine(list);
+				//}
+
+				////3.6.1
+				//Dictionary<string, int> dic = new Dictionary<string, int>();
+
+				//for (int i = 0; i < 3; i++)
+				//{
+				//	Console.WriteLine("名前を入力してください");
+				//	string name = Console.ReadLine();
+				//	Console.WriteLine("年齢を入力してください");
+				//	int age = int.Parse(Console.ReadLine());
+				//	dic.Add(name,age);
+				//}
+				//foreach (KeyValuePair<string, int>person in dic)
+				//{
+				//	Console.WriteLine($"{person.Key}:{person.Value}");
+				//}
+
+				//4.1.1
+				//Console.WriteLine("整数を入力してください");
+				//try
+				//{
+				//	int num = int.Parse(Console.ReadLine());
+				//}
+				//catch (FormatException)
+				//{
+				//	Console.WriteLine("整数で入力してください");
+				//}
+
+				//4.2.1
+				//try
+				//{
+				//	using (StreamReader reader = new StreamReader("test.txt"))
+				//	{ 
+				//	Console.WriteLine(reader.ReadToEnd());
+				//	}
+				//}
+				//catch (FileNotFoundException)
+				//{
+				//	Console.WriteLine("ファイルが存在しません");
+				//}
+				//finally
+				//{ 
+				//Console.WriteLine("処理を終了します");
+				//}
+
+				//4.3.1
+				//try
+				//{
+				//	int a = 10;
+				//	int b = 20;
+				//	int result = a/b;
+				//}
+				//catch (DivideByZeroException)
+				//{
+				//	Console.WriteLine("0での除算はできません");
+				//}
+				//try
+				//{
+				//	int[] nums = { 1, 2, 3 };
+				//	Console.WriteLine(nums[3]);
+				//}
+				//catch (IndexOutOfRangeException)
+				//{
+				//	Console.WriteLine("範囲外のアクセスです");
+				//}
+
+				//4.4.1
+				//	Console.WriteLine("年齢を入力してください");
+				//	int age = int.Parse(Console.ReadLine());
+				//try
+				//{
+				//	CheckAge(age);
+				//}
+				//catch (ArgumentOutOfRangeException)
+				//{
+				//	Console.WriteLine("入力が不正です");
+				//}
+
+				//4.5.1
+				//try
+				//{
+				//	Console.WriteLine("分子を入力してください");
+				//	int n = int.Parse(Console.ReadLine());
+				//	Console.WriteLine("分母を入力してください");
+				//	int m = int.Parse(Console.ReadLine());
+				//	int result = n / m;
+				//	Console.WriteLine($"結果{result}");
+				//}
+				//catch (DivideByZeroException)
+				//{
+				//	Console.WriteLine("0での除算はできません");
+				//}
+				//catch (FormatException)
+				//{
+				//	Console.WriteLine("整数を入力してください");
+				//}
+
+				//4.6.1
+				//int total = 0;
+				//for (int i = 1; i <= 10; i++)
+				//{
+				//	total += i;
+				//}
+				//Console.WriteLine("合計は " + total);
+
+				//4.7.1
+				//try
+				//{
+				//Console.WriteLine("数値1を入力してください");
+				//int num1 = int.Parse(Console.ReadLine());
+				//Console.WriteLine("数値2を入力してください");
+				//int num2 = int.Parse(Console.ReadLine());
+				//Console.WriteLine("演算子を入力してください");
+				//string en = Console.ReadLine();
+				//	if (en == "+")
+				//	{
+				//		Console.WriteLine(num1 + num2);
+				//	}
+				//	else if (en == "-")
+				//	{
+				//		Console.WriteLine(num1 - num2);
+				//	}
+				//	else if (en == "*")
+				//	{
+				//		Console.WriteLine(num1 * num2);
+				//	}
+				//	else if (en == "/")
+				//	{
+				//		Console.WriteLine(num1 / num2);
+				//	}
+				//	else
+				//	{
+				//		Console.WriteLine("想定外の演算子です");
+				//	}
+				//}
+				//catch (FormatException)
+				//{
+				//	Console.WriteLine("整数を入力してください");
+				//}
+				//catch(DivideByZeroException)
+				//{
+				//	Console.WriteLine("０での除算はできません");
+				//}
+
+				//5.1
+				//using (StreamWriter writer = new StreamWriter("output.txt"))
+				//{
+				//	writer.WriteLine("こんにちはソヒです");
+				//	writer.WriteLine("NARUTOが好きだってばよ");
+				//	writer.WriteLine("よろしくお願いします。");
+				//}
+				//Console.WriteLine("書き込みが完了しました");
+
+				//5.2.1
+				//try
+				//{
+				//	using (StreamReader reader = new StreamReader("output.txt"))
+				//	{
+				//		int lineNumber = 1;
+				//		string line;
+
+				//		while ((line = reader.ReadLine()) != null)
+				//		{
+				//			Console.WriteLine($"{lineNumber}:{line}");
+				//			lineNumber++;
+
+				//		}
+				//	}
+				//}
+				//catch (FileNotFoundException)
+				//{
+				//	Console.WriteLine("ファイルが見つかりません");
+				//}
+
+				//5.3.1
+				//using (StreamWriter writer = new StreamWriter("append.txt", append: true))
+				//{
+				//	writer.WriteLine("2026-08-27 ラーメン");
+				//}
+
+				//5.3.2
+				//using (StreamWriter writer = new StreamWriter("append.txt"))
+				//{
+				//	writer.WriteLine("初期化しました");
+				//}
+				//using (StreamReader reader = new StreamReader("append.txt"))
+				//{
+				//	Console.WriteLine(reader.ReadToEnd());
+				//}
+
+				//5.4.1
+				//Console.WriteLine("読み込みたいファイル名を入力してください");
+				//string path = Console.ReadLine();
+				//if (File.Exists(path))
+				//{
+				//	try
+				//	{
+				//		using (StreamReader reader = new StreamReader(path))
+				//		{
+				//			int lineNumber = 1;
+				//			string line;
+
+				//			while ((line = reader.ReadLine()) != null)
+				//			{
+				//				Console.WriteLine($"{lineNumber}: {line}");
+				//				lineNumber++;
+				//			}
+				//		}
+				//	}
+				//	catch (Exception)
+				//	{
+				//		Console.WriteLine("ファイルの読み込み中にエラーが発生しました");
+				//	}
+				//}
+				//else
+				//{ 
+				//Console.WriteLine("存在しません");
+				//}
+
+				//5.5.1
+				//string directory = "data/logs";
+				//Directory.CreateDirectory(directory);
+				//string path = Path.Combine(directory, "today.txt");
+				//using (StreamWriter writer = new StreamWriter(path))
+				//{
+				//	writer.WriteLine("今日の記録です");
+				//}
+
+				//5.5.2
+				//string[] files = Directory.GetFiles("data","*.txt");
+				//foreach (string file in files)
+				//{
+				//	FileInfo info = new FileInfo(file);
+
+				//	Console.WriteLine($"ファイル名{info.Name}");
+				//	Console.WriteLine($"サイズ{info.Length}バイト");
+				//	Console.WriteLine($"最終更新日時{info.LastWriteTime}");
+				//	Console.WriteLine();
+				//}
+
+				//5.6.1
+				//string[] lines = { "1行目です", "2行目です", "3行目です" };
+				//File.WriteAllLines("quick.txt",lines);
+				//string[] readLines = File.ReadAllLines("quick.txt");
+				//foreach (string line in readLines)
+				//{ 
+				//Console.WriteLine(line);
+				//}
+
+
 
 
 
