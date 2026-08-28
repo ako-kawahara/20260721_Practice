@@ -2152,6 +2152,130 @@ namespace _20260721_Practice
 			//	return (double)sum / nums.Length;
 			//}
 
+			//5.7.1
+			//foreach (string line in File.ReadAllLines("users.csv"))
+			//{
+			//	if (string.IsNullOrWhiteSpace(line))
+			//		continue;
+
+			//	string[] columns = line.Split(',');
+			//	if (columns.Length != 2)
+			//	{
+			//		Console.WriteLine($"警告: 想定外の列数のためスキップ: {line}");
+			//		continue;
+			//	}
+
+			//	string name = columns[0];
+			//	string age = columns[1];
+
+			//	Console.WriteLine($"Name={name},age={age}");
+
+			//}
+
+			//5.7.2
+			//		Console.WriteLine("名前を入力してください");
+			//		string name = Console.ReadLine();
+
+			//		int age;
+			//	while (true)
+			//	{
+			//		Console.WriteLine("年齢を入力してください");
+			//		try
+			//		{
+			//			age = int.Parse(Console.ReadLine());
+			//			break;
+			//		}
+			//		catch (Exception)
+			//		{
+			//			Console.WriteLine("整数を入力してください");
+			//		}
+			//	}
+
+			//		using (StreamWriter writer = new StreamWriter("users.csv",true))
+			//		{
+			//			writer.WriteLine($"{name},{age}");
+			//		}
+
+			//	Console.WriteLine("users.csv に追加しました。");
+
+			//5.8.1
+			//List<User> users = new List<User>();
+			//foreach (string line in File.ReadAllLines("users.csv"))
+			//{
+			//	if (string.IsNullOrWhiteSpace(line))
+			//		continue;
+			//	string[] coulums = line.Split(',');
+			//	if(coulums.Length != 2)
+			//	{
+			//		Console.WriteLine($"警告: 想定外の列数のためスキップ: {line}");
+			//		continue;
+			//	}
+			//	string name = coulums[0];
+			//	if (!int.TryParse(coulums[1], out int age))
+			//	{
+			//		Console.WriteLine($"警告: 年齢が整数ではないためスキップ: {line}");
+			//		continue;
+			//	}
+			//	User user = new User();
+			//	user.Name = name;
+			//	user.Age = age;
+
+			//	users.Add(user);
+			//}
+
+			//Console.WriteLine();
+			//Console.WriteLine("=== 年齢の降順 ===");
+			//List<User> sortedUsers = users
+			//.OrderByDescending(user => user.Age)
+			//.ToList();
+
+			//foreach (User user in sortedUsers)
+			//{
+			//	Console.WriteLine(user);
+			//}
+
+			//5.9.1
+			//static void PrintUsersTable(List<User> users)
+			//{
+			//	Console.WriteLine($"{"Name,-10"}{"Age",3}");
+			//	Console.WriteLine("----------------");
+
+			//	foreach (User user in users)
+			//	{ 
+			//	Console.WriteLine($"{user.Name,-10}{user.Age,3}");
+			//	}
+			//}
+
+			//5.10.1
+			//string path = "utf8.txt";
+
+			//using (StreamWriter writer = new StreamWriter(path, append: false, Encoding.UTF8))
+			//{
+			//	writer.WriteLine("こんにちは、C#です。");
+			//	writer.WriteLine("日本語の文字化けを確認します。");
+			//}
+			//using (StreamReader reader = new StreamReader(path, Encoding.UTF8))
+			//{
+			//	string line;
+
+			//	while ((line = reader.ReadLine()) != null)
+			//	{
+			//		Console.WriteLine(line);
+			//	}
+			//}
+
+			//try
+			//{
+			//	Log("起動しました");
+			//	Console.WriteLine("アプリを実行しています");
+			//	Log("終了します");
+			//}
+			//catch (Exception ex)
+			//{
+			//	Log("ERORR:" + ex.Message);
+			//}
+
+
 
 
 		}
