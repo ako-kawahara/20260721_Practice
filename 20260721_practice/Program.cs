@@ -2275,6 +2275,83 @@ namespace _20260721_Practice
 			//	Log("ERORR:" + ex.Message);
 			//}
 
+			//6.1.1
+			//6.1.2
+			//List<int> nums = new List<int>();
+			//for (int i = 0; i < 5; i++)
+			//{
+			//	Console.WriteLine("整数を入力してください");
+			//	int num = int.Parse(Console.ReadLine());
+			//	nums.Add(num);
+			//}
+			//int sum = 0;
+			//foreach (int number in nums)
+			//{
+			//	//Console.WriteLine(number);
+			//	sum += number;
+			//}
+			//Console.WriteLine(sum);
+
+			//6.2.1
+			//List<string> frus = new List<string>();
+			//frus.Add("りんご");
+			//frus.Add("ばなな");
+			//frus.Add("みかん");
+			//foreach (string fru in frus)
+			//{
+			//	Console.WriteLine(fru);
+			//}
+			//Console.WriteLine("フルーツ名を入力してください");
+			//string input = Console.ReadLine();
+			//if (frus.Contains(input))
+			//{
+			//	Console.WriteLine("含まれています");
+			//}
+			//else
+			//{ 
+			//Console.WriteLine("含まれていません");
+			//}
+
+			//6.3.1
+			//6.3.2
+			//Dictionary<string, int> nat = new Dictionary<string, int>();
+			//nat.Add("Japan",125);
+			//nat.Add("Freance",67);
+			//foreach(KeyValuePair<string, int> nati in nat)
+			//{
+			//	Console.WriteLine($"{nati.Key}:{nati.Value}");
+			//}
+			//Console.WriteLine("国名を入力してください");
+			//string con = Console.ReadLine();
+
+			//if (nat.ContainsKey(con))
+			//{
+			//	Console.WriteLine($"人口:{nat[con]}");
+			//}
+			//else 
+			//{
+			//Console.WriteLine("登録されていません");
+			//}
+
+			////6.4.1
+			//List<Student> students = new List<Student>();
+			//students.Add(new Student("田中",90));
+			//students.Add(new Student("佐藤",45));
+			//students.Add(new Student("橋田",87));
+			//foreach (Student student in students)
+			//{ 
+			//Console.WriteLine($"名前：{student.Name}、点数：{student.Score}");
+			//}
+
+			//6.5.1
+			List<int> numbers = new List<int>
+			{ 1, 2, 3, 4, 5, 6, 7, 8, 9 };
+			var evenNumbers = numbers.Where(n => n % 2 == 0);
+			foreach (int number in evenNumbers)
+			{
+				Console.WriteLine(number);
+			}
+
 
 
 
