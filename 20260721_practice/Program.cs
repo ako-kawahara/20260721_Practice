@@ -2353,6 +2353,59 @@ namespace _20260721_Practice
 			}
 
 
+			//6.5.2
+			//List<string> fruits = new List<string>()
+			//{ "apple", "banana",  "date","cherry"};
+			//var sortFruits = fruits.OrderBy(fruit => fruit);
+			//foreach (var fruit in sortFruits)
+			//{
+			//	Console.WriteLine(fruit);
+			//}
+
+			//6.6.1
+			//List<int> nums = new List<int>()
+			//	{1, 2, 3, 4, 5};
+			//var num = nums.Select(num => num * 2).ToList();
+			//foreach (var nu in num)
+			//{
+			//	Console.WriteLine(nu);
+			//}
+
+			//6.7.1
+			//List<int> nums = new List<int>()
+			//{ 80, 92, 75, 60, 45};
+			//var num = nums.Average();
+			//Console.WriteLine(num);
+
+			//6.7.2
+			//List<int> nums = new List<int>()
+			//{
+			//	80, 92, 54, 70, 88
+			//};
+			//var num = nums.Count(n => n >= 70);
+			//Console.WriteLine(num);
+
+			//6.8.1
+			//List<Student> students = new List<Student>();
+			//students.Add(new Student("tanaka",5));
+			//students.Add(new Student("matsuki",70));
+			//students.Add(new Student("koki",55));
+			//students.Add(new Student("foo",88));
+			//students.Add(new Student("apoo",99));
+			//var num = students.Count(n => n.Score >= 70);
+			//var numA = students.Count(n => n.Name.StartsWith("a"));
+
+			//Console.WriteLine($"70点以上の人数{num}");
+			//Console.WriteLine($"Aから始まる名前の人数{numA}");
+
+			//6.9.1
+			List<Student> students = new List<Student>();
+			students.Add(new Student("Alice", 80));
+			students.Add(new Student("Bob", 75));
+			students.Add(new Student("Charlie", 80));
+			students.Add(new Student("Dave", 60));
+
+
 
 
 		}
