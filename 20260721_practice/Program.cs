@@ -2399,11 +2399,71 @@ namespace _20260721_Practice
 			//Console.WriteLine($"Aから始まる名前の人数{numA}");
 
 			//6.9.1
-			List<Student> students = new List<Student>();
-			students.Add(new Student("Alice", 80));
-			students.Add(new Student("Bob", 75));
-			students.Add(new Student("Charlie", 80));
-			students.Add(new Student("Dave", 60));
+			//List<Student> students = new List<Student>();
+			//students.Add(new Student("Alice", 80));
+			//students.Add(new Student("Bob", 75));
+			//students.Add(new Student("Charlie", 80));
+			//students.Add(new Student("Dave", 60));
+			//var groups = students.GroupBy(student => student.Score);
+
+			//foreach (var group in groups)
+			//{
+			//	Console.WriteLine($"点数: {group.Key}");
+
+			//	foreach (var student in group)
+			//	{
+			//		Console.WriteLine($"  {student.Name}");
+			//	}
+			//}
+
+			//6.10
+			//List<Product> products = new List<Product>();
+			//products.Add(new Product("鶏ひき", 400, "肉"));
+			//products.Add(new Product("レタス", 100, "野菜"));
+			//products.Add(new Product("ナス", 150, "野菜"));
+			//products.Add(new Product("牛バラ", 1000, "肉"));
+			//products.Add(new Product("アジ", 300, "魚"));
+			//var thou = products.Where(n => n.Price >= 1000);
+			//foreach (var n in thou)
+			//{
+			//	Console.WriteLine(n);
+			//}
+
+			//var groups = products.GroupBy(n => n.Category);
+			//foreach (var group in groups)
+			//{
+			//	Console.WriteLine($"{group.Key}:{group.Count()}");
+			//}
+
+			//var bow = products.OrderByDescending(n => n.Price);
+			//foreach (var n in bow)
+			//{
+			//	Console.WriteLine(n);
+			//}
+
+			//7.1.1
+			//7.2.1
+			//7.3.1
+			//List<Employee> employees = new List<Employee>();
+			//employees.Add(new FullTimeEmployee("tanaka",30000));
+			//employees.Add(new FullTimeEmployee("noma",40000));
+			//employees.Add(new PartTimeEmployee("koko",100000,1200,5));
+
+			////foreach (Employee employee in employees)
+			//{
+			//	employee.ShowProfile();
+			//	Console.WriteLine($"{employee.Name}：{employee.CalculateMonthlyPay()}円");
+			//}
+
+			//7.4.1
+			//List<IReportable> reports = new List<IReportable>();
+
+			//reports.Add(new FullTimeEmployee("tanaka", 300000));
+			//reports.Add(new PartTimeEmployee("koko", 0, 1200, 80));
+			//foreach (IReportable report in reports)
+			//{
+			//	Console.WriteLine(report.GenerateReport());
+			//}
 
 
 
