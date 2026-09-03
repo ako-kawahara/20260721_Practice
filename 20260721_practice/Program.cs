@@ -2465,6 +2465,89 @@ namespace _20260721_Practice
 			//	Console.WriteLine(report.GenerateReport());
 			//}
 
+			//7.5.1
+			//List<Employee> employees = new List<Employee>
+			//{
+			//	new FullTimeEmployee("田中太郎", 300000m),
+			//	new FullTimeEmployee("佐藤花子", 280000m),
+			//	new PartTimeEmployee("鈴木一郎", 0m, 1200m, 80m)
+			//};
+			//foreach (Employee employee in employees)
+			//{
+			//	if (employee is IOvertimeEligible overtimeEmployee)
+			//	{
+			//		overtimeEmployee.AddOvertimeHours(10);
+			//	}
+			//}
+			//Console.WriteLine("=== 社員一覧 ===");
+
+			//foreach (Employee employee in employees)
+
+			//{
+			//	employee.ShowProfile();
+
+			//	Console.WriteLine($"月給：{employee.CalculateMonthlyPay()}円");
+
+			//	if (employee is IOvertimeEligible overtimeEmployee)
+			//	{
+			//		Console.WriteLine(
+			//			$"残業時間：{overtimeEmployee.GetOvertimeHours()}時間");
+			//	}
+			//	if (employee is IReportable reportableEmployee)
+			//	{
+			//		Console.WriteLine(reportableEmployee.GenerateReport());
+			//	}
+
+			//	Console.WriteLine();
+			//}
+
+			//7.6.1
+			Employee emp = new FullTimeEmployee("田中太郎", 300000m);
+			Console.WriteLine(
+		   $"月給：{emp.CalculateMonthlyPay()}円");
+			FullTimeEmployee fte1 = (FullTimeEmployee)emp;
+
+			fte1.AddOvertimeHours(10);
+
+			Console.WriteLine(
+				$"残業時間：{fte1.GetOvertimeHours()}時間");
+
+			Console.WriteLine(
+				$"月給：{fte1.CalculateMonthlyPay()}円");
+			// キャストに失敗すると
+			// InvalidCastExceptionが発生する
+			FullTimeEmployee? fte2 = emp as FullTimeEmployee;
+
+			if (fte2 != null)
+			{
+				fte2.AddOvertimeHours(5);
+
+				Console.WriteLine(
+					$"残業時間：{fte2.GetOvertimeHours()}時間");
+
+				Console.WriteLine(
+					$"月給：{fte2.CalculateMonthlyPay()}円");
+			}
+
+			// キャストに失敗した場合はnullになる
+			// 例外は発生しない
+			Console.WriteLine();
+			Console.WriteLine("=== 4. パターンマッチング ===");
+
+			if (emp is FullTimeEmployee fte3)
+			{
+				fte3.AddOvertimeHours(3);
+
+				Console.WriteLine(
+					$"残業時間：{fte3.GetOvertimeHours()}時間");
+
+				Console.WriteLine(
+					$"月給：{fte3.CalculateMonthlyPay()}円");
+			}
+
+			// 型が違う場合はfalseになり、
+			// if文の中は実行されない
+			// 例外も発生しない
 
 
 
