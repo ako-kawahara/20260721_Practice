@@ -2549,6 +2549,37 @@ namespace _20260721_Practice
 			// if文の中は実行されない
 			// 例外も発生しない
 
+			//7.8.1
+			//static void Main(string[] args)
+			//{
+			//	Employee emp = new FullTimeEmployee("田中太郎", 400000);
+
+			//	IOvertimeEligible overtime = (IOvertimeEligible)emp;
+			//	overtime.AddOvertimeHours(10);
+
+			//	emp.TaxStrategy = new FlatTaxStrategy();
+
+			//	Console.WriteLine("【一律10%】");
+			//	Console.WriteLine($"手取り：{emp.CalculateMonthlyPay()}円");
+
+			//	Console.WriteLine();
+
+			//	emp.TaxStrategy = new ProgressiveTaxStrategy();
+
+			//	Console.WriteLine("【段階税率】");
+			//	Console.WriteLine($"手取り：{emp.CalculateMonthlyPay()}円");
+			//}
+
+			////7.9.1
+			//List<IPayable> payables = new List<IPayable>();
+
+			//payables.Add(new FullTimeEmployee("田中", 300000));
+			//payables.Add(new PartTimeEmployee("佐藤", 0, 1200, 100));
+
+			//foreach (IPayable payable in payables)
+			//{
+			//	payable.Pay();
+			//}
 
 
 		}
